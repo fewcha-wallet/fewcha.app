@@ -1,6 +1,7 @@
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import "styles/global.css";
 import "styles/main.scss";
 
 function Website({ Component, pageProps }: AppProps) {
