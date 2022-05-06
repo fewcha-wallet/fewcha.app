@@ -29,9 +29,9 @@ const RoadmapItem: React.FC<{
 const Roadmap: React.FC = () => {
 	return (
 		<section className="relative py-[100px] bg-[url('/images/bg-2.png')] bg-no-repeat bg-center bg-cover">
-			<div className="container">
+			<div className="container px-7 sm:px-10 md:px-[60px]">
 				<div className="flex flex-col justify-center items-center text-center gap-6 tracking-[0.27px]">
-					<h3 className="font-bold text-[57px] leading-[80px] text-normal-400 max-w-[746px]">
+					<h3 className="font-bold text-3xl sm:text-4xl md:text-[57px] md:leading-[80px] text-normal-400 max-w-[746px]">
 						Our public roadmap
 					</h3>
 					<p className="text-normal-400 font-medium font-caption max-w-[615px]">
@@ -39,7 +39,7 @@ const Roadmap: React.FC = () => {
 						what's coming up and what is planned
 					</p>
 				</div>
-				<div className="grid grid-cols-3 gap-[21px] mt-[55px]">
+				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[21px] mt-[55px]">
 					{ROADMAPS.map((roadmap) => (
 						<div
 							key={roadmap.label}
