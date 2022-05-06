@@ -1,6 +1,7 @@
 @import "variables";
 @import "typefaces";
 @import "button";
+@import "custom";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -62,5 +63,8 @@
 		margin-right: auto;
 		padding-left: 15px;
 		padding-right: 15px;
+	}
+	.clip-type-1 {
+		clip-path: polygon(81.05% 9.1%, 92% 9.1%, 92% 10.1%, 81.05% 10.1%);
 	}
 }

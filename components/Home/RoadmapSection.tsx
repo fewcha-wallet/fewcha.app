@@ -29,7 +29,7 @@ const RoadmapItem: React.FC<{
 const Roadmap: React.FC = () => {
 	return (
 		<section className="relative py-[100px] bg-[url('/images/bg-2.png')] bg-no-repeat bg-center bg-cover">
-			<div className="max-w-[1040px] mx-auto">
+			<div className="container">
 				<div className="flex flex-col justify-center items-center text-center gap-6 tracking-[0.27px]">
 					<h3 className="font-bold text-[57px] leading-[80px] text-normal-400 max-w-[746px]">
 						Our public roadmap

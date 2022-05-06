@@ -4,7 +4,7 @@ import { BROWSERS } from "assets/constants";
 const ReadySection: React.FC = () => {
 	return (
 		<div className="bg-[#f3f4f5] py-[100px]">
-			<div className="max-w-[1040px] mx-auto">
+			<div className="container">
 				<div className="bg-white flex items-center p-12 rounded-3xl">
 					<div className="flex flex-col gap-6 flex-1 text-black">
 						<h6 className="font-bold text-4xl leading-[48px] tracking-[0.27px]">

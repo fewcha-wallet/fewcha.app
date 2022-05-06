@@ -4,7 +4,7 @@ import { BROWSERS } from "assets/constants.js";
 const SpendAndCheck: React.FC = () => {
 	return (
 		<section className="bg-[#f3f4f5] pt-[100px] pb-12">
-			<div className="max-w-[1040px] mx-auto">
+			<div className="container">
 				<div className="flex flex-col justify-center items-center text-center gap-6">
 					<h2 className="font-bold font-super text-normal-400 max-w-[760px]">
 						Spend and trade digital assets like you were born to do.
