@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const Footer: React.FC = () => {
 	return (
-		<footer className="relative bg-normal-500 py-[100px] text-white">
-			<div className="container grid grid-cols-2 items-start gap-7">
+		<footer className="relative bg-normal-500 py-[60px] lg:py-[100px] text-white">
+			<div className="container px-7 sm:px-10 md:px-[60px] grid 2md:grid-cols-2 items-start gap-[60px] 2md:gap-7">
 				<div className="grid gap-y-4">
 					<img src="/svgs/logo-light.svg" alt="Logo light" />
 					<p className="text-base">© Fewcha Technologies, Inc</p>
@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
 						</div>
 					</div>
 				</div>
-				<div className="grid grid-cols-3 gap-x-11 items-start">
+				<div className="grid sm:grid-cols-3 gap-x-11 items-start gap-y-[60px] sm:gap-y-0">
 					{FOOTER_MENU.map((menu) => (
 						<div key={menu.title} className="grid gap-y-[9px]">
 							<p className="text-white font-semibold text-base">{menu.title}</p>
