@@ -1,0 +1,76 @@
+.hambuger {
+	position: relative;
+	top: 0;
+	right: 0;
+	z-index: 5;
+	padding: 11px;
+	cursor: pointer;
+	margin-left: auto;
+	-webkit-tap-highlight-color: transparent;
+	z-index: 99;
+	transition: opacity 0.25s ease, top 0.35s ease;
+	&::before,
+	&::after,
+	& > .line {
+		content: "";
+		background-color: $color-n500;
+		display: block;
+		width: 18px;
+		height: 3px;
+		transition: all 0.25s ease;
+	}
+	& .line {
+		width: 12px;
+		margin: 5px 0 5px auto;
+		opacity: 1;
+	}
+	&.is-active {
+		& > .line {
+			pointer-events: none;
+			opacity: 0;
+			transform: translateX(20px);
+			transition: all 0.25s ease, opacity 0.25s ease 0.025s;
+		}
+		&::before {
+			transform: translateY(8px) rotate(45deg);
+		}
+		&::after {
+			transform: translateY(-8px) rotate(-45deg);
+		}
+	}
+}
+
+.hambugerBg {
+	position: fixed;
+	top: 0;
+	right: 1.5rem;
+	width: 40px;
+	height: 40px;
+	padding: 10px;
+	z-index: -1;
+	border-radius: 50%;
+	cursor: pointer;
+	margin-left: auto;
+	transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+	-webkit-tap-highlight-color: transparent;
+	background: url("/images/bg.png") no-repeat center/cover;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	inset: 0;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
+	&.is-active {
+		opacity: 1;
+		pointer-events: auto;
+		& .hambugerBg {
+			transform: scale(80);
+		}
+	}
+}
