@@ -72,7 +72,7 @@ const SpendAndCheck: React.FC = () => {
 							{BROWSERS.map((browser) => (
 								<div
 									key={browser.label}
-									className="p-4 bg-white rounded-[14px] bg-opacity-50 shadow-type-3"
+									className="p-4 bg-white rounded-[14px] bg-opacity-50 shadow-type-3 flex justify-center items-center"
 								>
 									<img src={browser.url} alt={browser.label} />
 								</div>

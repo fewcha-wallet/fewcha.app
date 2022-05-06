@@ -56,7 +56,11 @@ module.exports = {
         cotta: {
           100: '#ed705f',
         }
-      }
+      },
+      screens: {
+        xs: '376px',
+        xl: '1440px'
+      },
     },
   },
   plugins: [],
