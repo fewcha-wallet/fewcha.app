@@ -57,14 +57,25 @@
 		background: $color-white;
 		@apply shadow-type-1;
 	}
+	.clip-type-1 {
+		clip-path: polygon(81.05% 9.1%, 92% 9.1%, 92% 10.1%, 81.05% 10.1%);
+	}
+
 	.container {
 		max-width: 1070px;
 		margin-left: auto;
 		margin-right: auto;
 		padding-left: 15px;
 		padding-right: 15px;
-	}
-	.clip-type-1 {
-		clip-path: polygon(81.05% 9.1%, 92% 9.1%, 92% 10.1%, 81.05% 10.1%);
+		@media (min-width: 768px) {
+			max-width: 1150px;
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+		@media (min-width: 1024px) {
+			max-width: 1160px;
+			padding-left: 60px;
+			padding-right: 60px;
+		}
 	}
 }

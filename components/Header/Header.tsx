@@ -42,7 +42,7 @@ const Header: React.FC = () => {
 				scroll ? "is-scroll" : "py-14"
 			}`}
 		>
-			<div className="container xs:px-10 flex items-center">
+			<div className="container xs:px-13 flex items-center">
 				<Link href="/">
 					<a className="block">
 						<img src="/svgs/logo.svg" alt="logo" />
