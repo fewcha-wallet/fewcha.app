@@ -4,7 +4,7 @@ import { BROWSERS } from "assets/constants.js";
 const SpendAndCheck: React.FC = () => {
 	return (
 		<section className="bg-[#f3f4f5] pt-[100px] pb-12">
-			<div className="container px-7 sm:px-10 md:px-[60px]">
+			<div className="container">
 				<div className="flex flex-col justify-center items-center text-center gap-6">
 					<h2 className="font-bold text-[28px] leading-9 sm:font-super text-normal-400 max-w-[760px]">
 						Spend and trade digital assets like you were born to do.
@@ -22,8 +22,7 @@ const SpendAndCheck: React.FC = () => {
 					>
 						<div className="flex flex-col gap-6 text-white relative z-[1] flex-1 text-center 2md:text-left">
 							<h4 className="font-bold text-[28px] leading-9 sm:text-[40px] md:text-5xl lg:text-[52px] md:leading-[58px] tracking-[0.27px]">
-								A fully secured wallet for{" "}
-								<span className="2md:block">Aptos blockchain</span>
+								A fully secured wallet for Aptos blockchain
 							</h4>
 							<p>
 								Fewcha offers high security and full functions of buying,
