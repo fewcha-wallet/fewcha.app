@@ -1,153 +1,164 @@
 export const MENUS = [
   {
-    href: '/features',
-    name: 'Features'
+    href: "/#roadmap",
+    name: "Roadmap",
   },
   {
-    href: '/blog',
-    name: 'Blog'
+    external: "https://medium.com/@fewcha",
+    href: "",
+    name: "Blog",
   },
   {
-    href: '/support',
-    name: 'Support'
-  }
-]
+    external: "https://discord.io/fewcha",
+    href: "",
+    name: "Support",
+  },
+];
 
 export const BROWSERS = [
   {
-    label: 'Chrome',
-    url: '/svgs/chrome.svg',
+    label: "Chrome",
+    url: "/svgs/chrome.svg",
   },
   {
-    label: 'Brave',
-    url: '/svgs/brave.svg',
+    label: "Brave",
+    url: "/svgs/brave.svg",
   },
   {
-    label: 'Firefox',
-    url: '/svgs/firefox.svg',
-  },{
-    label: 'Microsoft Edge',
-    url: '/svgs/microsoft-edge.svg',
-  }
-
-]
+    label: "Firefox",
+    url: "/svgs/firefox.svg",
+  },
+  {
+    label: "Microsoft Edge",
+    url: "/svgs/microsoft-edge.svg",
+  },
+];
 
 export const ROADMAPS = [
   {
-    label: '✅ Completed',
+    label: "✅ Completed",
     cards: [
       {
-        title: 'Wallet Prototype 1.0',
-        date: 'MAY 2022',
+        title: "Wallet Prototype 0.1.0",
+        date: "MAY 2022",
         list: [
-          'Chrome, Brave, Edge, Firefox',
-          'Wallet control (mnemomic, private key)',
-          'Contact addresses book',
-          'Change network RPC',
-          'Faucet'
-        ]
-      }
-    ]
+          "Chrome, Brave, Edge",
+          "Create wallet",
+          "Wallet management",
+          "Send, receive APT balance",
+          "Change network RPC",
+          "Contact addresses book",
+          "Faucet",
+        ],
+      },
+    ],
   },
   {
-    label: '⏱ In progress',
+    label: "⏱ In progress",
     cards: [
       {
-        title: 'Wallet Prototype 1.1',
-        date: 'MAY 2022',
+        title: "Wallet Prototype 0.1.1",
+        date: "MAY 2022",
         list: [
-          'Token listings',
-          'NFTs listings',
-          'Send Token & NFTs',
-          'Receive Token & NFTs',
-          'Integrate with Aptos Web3.js'
-        ]
+          "Token listings",
+          "NFTs listings",
+          "Send and receive Token",
+          "Send and receive NFTs",
+        ],
       },
       {
-        title: 'Aptos Web3',
-        date: 'MAY 2022',
+        title: "Aptos Web3",
+        date: "MAY 2022",
         list: [
-          'Integrate with official Web3.js',
-          'Websites that can connect, make transactions',
-        ]
-      }
-    ]
+          "Integrate w/ Aptos Web3.js",
+          "Websites that can connect",
+          "Make transactions",
+        ],
+      },
+    ],
   },
-   {
-    label: '💭 Planned',
+  {
+    label: "💭 Planned",
     cards: [
       {
-        title: 'Mobile version',
-        date: 'JUNE 2022',
-        list: []
+        title: "Release version 1.0.0",
+        date: "July 2022",
+        list: ["Update to official design", "Become a validator node!!!"],
       },
       {
-        title: 'Swap',
-        date: 'JUNE 2022',
-        list: []
-      }
-    ]
+        title: "Firefox version",
+        date: "August 2022",
+        list: [],
+      },
+      {
+        title: "Mobile version",
+        date: "September 2022",
+        list: ["Android", "iOS"],
+      },
+      {
+        title: "dApp",
+        date: "December 2022",
+        list: ["Token swap", "NFTs marketplace"],
+      },
+    ],
   },
-]
+];
 
 export const FOOTER_MENU = [
   {
-    title: 'Product',
+    title: "Product",
     list: [
       {
-        href: '/',
-        label: 'Overview'
+        external: "/",
+        label: "Overview",
       },
       {
-        href: '/',
-        label: 'Download'
+        external: "/",
+        label: "Download",
       },
       {
-        href: '/',
-        label: 'Support'
+        external: "https://discord.io/fewcha",
+        label: "Support",
       },
       {
-        href: '/',
-        label: 'Feature Requests'
+        external: "https://discord.io/fewcha",
+        label: "Feature Requests",
       },
-    ]
+    ],
   },
   {
-    title: 'Resources',
+    title: "Resources",
     list: [
       {
-        href: '/',
-        label: 'Blog'
+        external: "https://medium.com/@fewcha",
+        label: "Blog",
       },
       {
-        href: '/',
-        label: 'Docs'
+        label: "Docs (Building)",
       },
       {
-        href: '/',
-        label: 'Status'
+        href: "",
+        label: "Status",
       },
       {
-        href: '/',
-        label: 'Terms & Privacy'
+        href: "/privacy",
+        label: "Terms & Privacy",
       },
-    ]
+    ],
   },
   {
-    title: 'Company',
+    title: "Company",
     list: [
       {
-        href: '/',
-        label: 'About'
+        href: "https://medium.com/@fewcha",
+        label: "About",
       },
       {
-        href: '/',
-        label: 'Jobs'
+        label: "Jobs",
       },
       {
-        href: '/',
-        label: 'Press Kit'
+        label: "Press Kit",
       },
-    ]
-  }
-]
+    ],
+  },
+];

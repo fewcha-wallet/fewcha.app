@@ -9,24 +9,24 @@ import Footer from "components/Footer/Footer";
 import ReadySection from "components/Home/ReadySection";
 
 const Home: NextPage = () => {
-	return (
-		<Fragment>
-			<Head>
-				<title>Fewcha Aptos Wallet</title>
-				<meta name="description" content="" />
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
+  return (
+    <Fragment>
+      <Head>
+        <title>Fewcha - Aptos Wallet</title>
+        <meta name="description" content="" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-			<Header />
-			<main>
-				<HeroSection />
-				<SpendAndCheck />
-				<RoadmapSection />
-				<ReadySection />
-			</main>
-			<Footer />
-		</Fragment>
-	);
+      <Header />
+      <main>
+        <HeroSection />
+        <SpendAndCheck />
+        <RoadmapSection />
+        <ReadySection />
+      </main>
+      <Footer />
+    </Fragment>
+  );
 };
 
 export default Home;
