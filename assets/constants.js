@@ -64,6 +64,7 @@ export const ROADMAPS = [
           "NFTs listings",
           "Send and receive Token",
           "Send and receive NFTs",
+          "Connect with ledger wallet",
         ],
       },
       {
