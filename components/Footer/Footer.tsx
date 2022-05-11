@@ -10,12 +10,22 @@ const Footer: React.FC = () => {
           <img src="/svgs/logo-light.svg" alt="Logo light" />
           <p className="text-base">© Fewcha Technologies, Inc</p>
           <div className="flex items-center gap-4">
-            <div className="py-[13px] px-[9px] bg-purple-100 flex items-center justify-center rounded-[50%]">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://discord.io/fewcha"
+              className="py-[13px] px-[9px] bg-purple-100 flex items-center justify-center rounded-[50%]"
+            >
               <img src="/svgs/discord.svg" alt="Discord" />
-            </div>
-            <div className="pt-[13px] pb-3 pl-[9px] pr-[13px] flex items-center justify-center rounded-[50%] bg-[linear-gradient(225deg,#2EBFE8_14.64%,#13A9DC_85.1%)]">
-              <img src="/svgs/telegram.svg" alt="Discord" />
-            </div>
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://t.me/FewchaWallet"
+              className="pt-[13px] pb-3 pl-[9px] pr-[13px] flex items-center justify-center rounded-[50%] bg-[linear-gradient(225deg,#2EBFE8_14.64%,#13A9DC_85.1%)]"
+            >
+              <img src="/svgs/telegram.svg" alt="Telegram" />
+            </a>
           </div>
         </div>
         <div className="grid sm:grid-cols-3 gap-x-11 items-start gap-y-[60px] sm:gap-y-0">
