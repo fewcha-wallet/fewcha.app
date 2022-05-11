@@ -63,6 +63,8 @@ const ExternalFooterLink: React.FC<{
   return (
     <a
       href={item.external}
+      target="_blank"
+      rel="noreferrer"
       className="text-base text-gray-600 transition-all ease-in duration-150 hover:text-gray-400"
     >
       {item.label}
