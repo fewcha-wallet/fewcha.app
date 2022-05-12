@@ -30,9 +30,11 @@ const HeaderMobile: React.FC<{ isShow: boolean }> = ({ isShow }) => {
           </Link>
         );
       })}
-      <AtButton className="inline-block sm:hidden shadow-type-1 px-5 py-[14px] bg-white text-black font-medium rounded-[34px] hover:bg-inherit mt-5">
-        Download
-      </AtButton>
+      <a href="https://fewcha.app" target="_blank" rel="noreferrer">
+        <AtButton className="inline-block sm:hidden shadow-type-1 px-5 py-[14px] bg-white text-black font-medium rounded-[34px] hover:bg-inherit mt-5">
+          Download
+        </AtButton>
+      </a>
     </div>
   );
 };

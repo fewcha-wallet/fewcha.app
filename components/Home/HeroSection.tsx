@@ -13,7 +13,7 @@ const HeroSection: React.FC = () => {
             Fewcha was designed for any financial transactions you want to make
             with your digital assets in Aptos Blockchain
           </p>
-          <a href="https://fewcha.app">
+          <a href="https://fewcha.app" target="_blank" rel="noreferrer">
             <AtButton className="shadow-type-2 px-[25px] py-[16px] font-semibold rounded-[34px] border-2 border-primary-100">
               Try Fewcha now
             </AtButton>

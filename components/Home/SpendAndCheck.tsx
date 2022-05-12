@@ -81,12 +81,15 @@ const SpendAndCheck: React.FC = () => {
             </div>
             <div className="grid grid-cols-2 gap-x-[38px] gap-y-7 mt-6 2md:mt-0">
               {BROWSERS.map((browser) => (
-                <div
+                <a
+                  href={browser.href}
+                  target="_blank"
+                  rel="noreferrer"
                   key={browser.label}
                   className="cursor-pointer p-4 bg-white rounded-[14px] bg-opacity-50 shadow-type-3 flex justify-center items-center"
                 >
                   <img src={browser.url} alt={browser.label} />
-                </div>
+                </a>
               ))}
             </div>
           </div>

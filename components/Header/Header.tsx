@@ -76,9 +76,11 @@ const Header: React.FC = () => {
         </div>
 
         <div className="relative ml-auto flex items-center gap-6">
-          <AtButton className="hidden sm:inline-block shadow-type-1 px-5 py-[14px] bg-white text-black font-medium rounded-[34px] hover:bg-inherit">
-            Download
-          </AtButton>
+          <a href="https://fewcha.app" target="_blank" rel="noreferrer">
+            <AtButton className="hidden sm:inline-block shadow-type-1 px-5 py-[14px] bg-white text-black font-medium rounded-[34px] hover:bg-inherit">
+              Download
+            </AtButton>
+          </a>
 
           <div
             className={`block md:hidden hambuger ${

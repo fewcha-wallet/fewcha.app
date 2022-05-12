@@ -19,18 +19,22 @@ export const BROWSERS = [
   {
     label: "Chrome",
     url: "/svgs/chrome.svg",
+    href: "https://fewcha.app",
   },
   {
     label: "Brave",
     url: "/svgs/brave.svg",
+    href: "https://fewcha.app",
   },
   {
     label: "Firefox",
     url: "/svgs/firefox.svg",
+    href: "https://fewcha.app",
   },
   {
     label: "Microsoft Edge",
     url: "/svgs/microsoft-edge.svg",
+    href: "https://fewcha.app",
   },
 ];
 
@@ -74,6 +78,7 @@ export const ROADMAPS = [
           "Integrate w/ Aptos Web3.js",
           "Websites that can connect",
           "Make transactions",
+          "Confirm transactions flow",
         ],
       },
     ],

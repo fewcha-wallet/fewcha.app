@@ -11,18 +11,25 @@ const ReadySection: React.FC = () => {
             <h6 className="font-bold text-3xl md:text-4xl md:leading-[48px] tracking-[0.27px]">
               Ready to get started?
             </h6>
-            <p className="text-base flex items-center">
+            <div className="text-base flex items-center">
               Be the first user of Fewcha{" "}
               <div className="font-bold text-md ml-4">
                 Download now <ArrowRight size={24} />
               </div>
-            </p>
+            </div>
           </div>
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-16 flex-1">
             {BROWSERS.map((browser) => (
-              <div key={browser.label} className="cursor-pointer">
+              <a
+                key={browser.label}
+                className="cursor-pointer"
+                href={browser.href}
+                target="_blank"
+                rel="noreferrer"
+              >
                 <img src={browser.url} alt={browser.label} />
-              </div>
+              </a>
             ))}
           </div>
         </div>
