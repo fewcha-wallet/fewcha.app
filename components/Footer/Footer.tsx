@@ -1,6 +1,7 @@
 import React from "react";
-import { FOOTER_MENU } from "assets/constants";
+import { FOOTER_MENU } from "config/constants";
 import Link from "next/link";
+import { discordURL, telegramURL } from "config/config";
 
 const Footer: React.FC = () => {
   return (
@@ -13,7 +14,7 @@ const Footer: React.FC = () => {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://discord.io/fewcha"
+              href={discordURL}
               className="py-[13px] px-[9px] bg-purple-100 flex items-center justify-center rounded-[50%]"
             >
               <img src="/svgs/discord.svg" alt="Discord" />
@@ -21,7 +22,7 @@ const Footer: React.FC = () => {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://t.me/FewchaWallet"
+              href={telegramURL}
               className="pt-[13px] pb-3 pl-[9px] pr-[13px] flex items-center justify-center rounded-[50%] bg-[linear-gradient(225deg,#2EBFE8_14.64%,#13A9DC_85.1%)]"
             >
               <img src="/svgs/telegram.svg" alt="Telegram" />

@@ -1,15 +1,22 @@
+import {
+  chromeStoreExtURL,
+  discordURL,
+  firefoxStoreExtURL,
+  mediumURL,
+} from "config/config";
+
 export const MENUS = [
   {
     href: "/#roadmap",
     name: "Roadmap",
   },
   {
-    external: "https://medium.com/@fewcha",
+    external: mediumURL,
     href: "",
     name: "Blog",
   },
   {
-    external: "https://discord.io/fewcha",
+    external: discordURL,
     href: "",
     name: "Support",
   },
@@ -19,22 +26,22 @@ export const BROWSERS = [
   {
     label: "Chrome",
     url: "/svgs/chrome.svg",
-    href: "https://fewcha.app",
+    href: chromeStoreExtURL,
   },
   {
     label: "Brave",
     url: "/svgs/brave.svg",
-    href: "https://fewcha.app",
+    href: chromeStoreExtURL,
   },
   {
     label: "Firefox",
     url: "/svgs/firefox.svg",
-    href: "https://fewcha.app",
+    href: firefoxStoreExtURL,
   },
   {
     label: "Microsoft Edge",
     url: "/svgs/microsoft-edge.svg",
-    href: "https://fewcha.app",
+    href: chromeStoreExtURL,
   },
 ];
 
@@ -123,11 +130,11 @@ export const FOOTER_MENU = [
         label: "Download",
       },
       {
-        external: "https://discord.io/fewcha",
+        external: discordURL,
         label: "Support",
       },
       {
-        external: "https://discord.io/fewcha",
+        external: discordURL,
         label: "Feature Requests",
       },
     ],
@@ -136,7 +143,7 @@ export const FOOTER_MENU = [
     title: "Resources",
     list: [
       {
-        external: "https://medium.com/@fewcha",
+        external: mediumURL,
         label: "Blog",
       },
       {
@@ -156,7 +163,7 @@ export const FOOTER_MENU = [
     title: "Company",
     list: [
       {
-        href: "https://medium.com/@fewcha",
+        href: mediumURL,
         label: "About",
       },
       {

@@ -1,5 +1,5 @@
 import React from "react";
-import { MENUS } from "assets/constants";
+import { MENUS } from "config/constants";
 import Link from "next/link";
 import AtButton from "components/AtButton";
 

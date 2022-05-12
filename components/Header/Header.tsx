@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { MENUS } from "assets/constants";
+import { MENUS } from "config/constants";
 import AtButton from "components/AtButton";
 import HeaderMobile from "./HeaderMobile";
 import styled from "styled-components";

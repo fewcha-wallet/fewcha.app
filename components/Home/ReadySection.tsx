@@ -1,5 +1,5 @@
 import React from "react";
-import { BROWSERS } from "assets/constants";
+import { BROWSERS } from "config/constants";
 import { ArrowRight } from "@styled-icons/bootstrap";
 
 const ReadySection: React.FC = () => {

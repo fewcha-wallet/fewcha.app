@@ -1,5 +1,5 @@
 import React from "react";
-import { BROWSERS } from "assets/constants.js";
+import { BROWSERS } from "config/constants";
 
 const SpendAndCheck: React.FC = () => {
   return (
