@@ -68,7 +68,7 @@ export const ROADMAPS = [
     label: "⏱ In progress",
     cards: [
       {
-        title: "Wallet Prototype 0.1.1",
+        title: "Wallet Prototype 0.2.0",
         date: "MAY 2022",
         list: [
           "Token listings",
