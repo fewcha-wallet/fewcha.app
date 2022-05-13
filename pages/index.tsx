@@ -12,7 +12,7 @@ const Home: NextPage = () => {
   return (
     <Fragment>
       <Head>
-        <title>Fewcha - Aptos Wallet</title>
+        <title>Fewcha Aptos Wallet</title>
         <meta
           name="description"
           content="Fewcha Aptos Wallet - the wallet of layer 1 blockchain Aptos"
