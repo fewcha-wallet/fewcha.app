@@ -1,21 +1,11 @@
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 import { MENUS } from "config/constants";
-import AtButton from "components/AtButton";
-import HeaderMobile from "./HeaderMobile";
-import styled from "styled-components";
-
-const Hambuger = styled.div`
-  position: relative;
-  top: 0;
-  right: 0;
-  z-index: 5;
-  padding: 11px;
-  cursor: pointer;
-  margin-left: auto;
-  -webkit-tap-highlight-color: transparent;
-  transition: opacity 0.25s ease, top 0.35s ease;
-`;
+import MobileMenu from "./MobileMenu";
+import { chromeStoreExtURL } from "config/config";
+import cn from "services/cn";
+import Scroll from "react-scroll";
+import scroller = Scroll.scroller;
 
 const Header: React.FC = () => {
   const [scroll, setScroll] = useState(false);
@@ -38,18 +28,29 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 w-full z-[999] transition-all ease-in-out duration-300 ${
-        scroll ? "is-scroll" : "py-14"
-      }`}
+      className={cn(
+        "white fixed top-0 left-0 right-0 w-full z-[999] transition-all ease-in-out duration-300",
+        {
+          "is-scroll": scroll,
+          "py-5 lg:py-7 xl:py-10": !scroll,
+        }
+      )}
     >
       <div className="container xs:px-13 flex items-center">
         <Link href="/">
           <a className="block">
-            <img src="/svgs/logo.svg" alt="logo" />
+            <img
+              src={cn({
+                "/svgs/logo.svg": !scroll,
+                "/svgs/alt-logo.svg": scroll,
+              })}
+              alt="logo"
+              className="max-w-[105px] md:max-w-[155px]"
+            />
           </a>
         </Link>
 
-        <div className="hidden md:flex items-center justify-center flex-1 gap-x-10">
+        <div className="hidden lg:flex items-center justify-center flex-1 gap-x-10">
           {MENUS.map((menu, idx) => {
             if (menu.external) {
               return (
@@ -58,32 +59,52 @@ const Header: React.FC = () => {
                   key={idx}
                   target="_blank"
                   rel="noreferrer"
-                  className="py-2 block text-normal-400 font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200"
+                  className="header-link py-2 block text-white font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200"
                 >
                   {menu.name}
                 </a>
               );
             }
 
-            return (
-              <Link href={menu.href} key={idx}>
-                <a className="py-2 block text-normal-400 font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200">
-                  {menu.name}
-                </a>
-              </Link>
-            );
+            if (menu.href) {
+              return (
+                <Link href={menu.href} key={idx}>
+                  <a
+                    onClick={(e) => {
+                      if (menu.href === "/#roadmap") {
+                        e.preventDefault();
+                        scroller.scrollTo("roadmap", {
+                          duration: 500,
+                          delay: 50,
+                          smooth: true,
+                          offset: -90,
+                        });
+                      }
+                    }}
+                    className="header-link py-2 block text-white font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200"
+                  >
+                    {menu.name}
+                  </a>
+                </Link>
+              );
+            }
+
+            return null;
           })}
         </div>
 
         <div className="relative ml-auto flex items-center gap-6">
-          <a href="https://fewcha.app" target="_blank" rel="noreferrer">
-            <AtButton className="hidden sm:inline-block shadow-type-1 px-5 py-[14px] bg-white text-black font-medium rounded-[34px] hover:bg-inherit">
-              Download
-            </AtButton>
+          <a
+            href={chromeStoreExtURL}
+            target="_blank"
+            rel="noreferrer"
+            className="hidden sm:inline-block px-6 py-[14px] bg-[#007EFB] text-white font-medium rounded-[34px]"
+          >
+            Download
           </a>
 
           <div
-            className={`block md:hidden hambuger ${
+            className={`block lg:hidden hambuger ${
               showMobile ? "is-active" : ""
             }`}
             onClick={toggleMobile}
@@ -92,7 +113,7 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
-      <HeaderMobile isShow={showMobile} />
+      <MobileMenu isShow={showMobile} />
     </header>
   );
 };

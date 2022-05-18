@@ -7,17 +7,19 @@ import {
 
 export const MENUS = [
   {
+    href: "/",
+    name: "Overview",
+  },
+  {
     href: "/#roadmap",
     name: "Roadmap",
   },
   {
     external: mediumURL,
-    href: "",
     name: "Blog",
   },
   {
     external: discordURL,
-    href: "",
     name: "Support",
   },
 ];
@@ -47,7 +49,12 @@ export const BROWSERS = [
 
 export const ROADMAPS = [
   {
-    label: "✅ Completed",
+    label: (
+      <div className="flex gap-2">
+        <div>✅</div>
+        <div className="ml-4">Completed</div>
+      </div>
+    ),
     cards: [
       {
         title: "Wallet Prototype 0.1.0",
@@ -65,7 +72,12 @@ export const ROADMAPS = [
     ],
   },
   {
-    label: "⏱ In progress",
+    label: (
+      <div className="flex">
+        <div>⏱</div>
+        <div className="ml-4">In progress</div>
+      </div>
+    ),
     cards: [
       {
         title: "Wallet Prototype 0.2.0",
@@ -91,7 +103,12 @@ export const ROADMAPS = [
     ],
   },
   {
-    label: "💭 Planned",
+    label: (
+      <div className="flex gap-2">
+        <div>💭</div>
+        <div className="ml-4">Planned</div>
+      </div>
+    ),
     cards: [
       {
         title: "Release version 1.0.0",
@@ -154,8 +171,12 @@ export const FOOTER_MENU = [
         label: "Status",
       },
       {
+        href: "/terms",
+        label: "Terms",
+      },
+      {
         href: "/privacy",
-        label: "Terms & Privacy",
+        label: "Privacy",
       },
     ],
   },

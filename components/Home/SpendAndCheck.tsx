@@ -9,10 +9,10 @@ const SpendAndCheck: React.FC = () => {
           <h2 className="font-bold text-[28px] leading-9 sm:font-super text-normal-400 max-w-[760px]">
             Spend and trade digital assets like you were born to do.
           </h2>
-          <p className="font-medium font-caption text-normal-400 max-w-[666px]">
+          <p className="font-medium font-caption text-normal-400 max-w-[666px] font-desc">
             Fewcha is a new kind of wallet for the Aptos blockchain. It's not
             just about security - we've built it to be fully functional,
-            feature-rich and ‘fewcha’ ready
+            feature-rich and 'fewcha' ready
           </p>
         </div>
         <div className="grid grid-cols-1 2md:grid-cols-2 gap-y-6 gap-x-5 mt-[60px] lg:mt-20">
@@ -26,7 +26,7 @@ const SpendAndCheck: React.FC = () => {
               </h4>
               <p>
                 Fewcha offers high security and full functions of buying,
-                sending, receiving, swapping and managing NFTs. It’s a new way
+                sending, receiving, swapping and managing NFTs. It's a new way
                 to manage your digital assets.
               </p>
             </div>
@@ -50,7 +50,7 @@ const SpendAndCheck: React.FC = () => {
               className="w-[150px] sm:w-auto object-cover"
             />
             <p className="text-center mt-[50px] text-base tracking-[0.27px]">
-              Only you can access your wallet. We don’t collect any personal
+              Only you can access your wallet. We don't collect any personal
               data.
             </p>
           </div>

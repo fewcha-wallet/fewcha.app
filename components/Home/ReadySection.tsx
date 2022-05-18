@@ -12,10 +12,10 @@ const ReadySection: React.FC = () => {
               Ready to get started?
             </h6>
             <div className="text-base flex items-center">
-              Be the first user of Fewcha{" "}
-              <div className="font-bold text-md ml-4">
+              Be the first user of Fewcha Aptos Wallet{" "}
+              {/* <div className="font-bold text-md ml-4">
                 Download now <ArrowRight size={24} />
-              </div>
+              </div> */}
             </div>
           </div>
 

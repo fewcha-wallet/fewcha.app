@@ -10,7 +10,7 @@ const RoadmapItem: React.FC<{
   };
 }> = ({ card }) => {
   return (
-    <div className="bg-white p-6 rounded-2xl flex flex-col gap-[6px]">
+    <div className="bg-white p-6 rounded-2xl flex flex-col gap-[6px] shadow">
       <p className="font-semibold text-black text-lg capitalize">
         {card.title}
       </p>
@@ -28,7 +28,7 @@ const RoadmapItem: React.FC<{
 
 const Roadmap: React.FC = () => {
   return (
-    <section className="relative py-[100px] bg-[url('/images/bg-2.png')] bg-no-repeat bg-center bg-cover">
+    <section className="roadmap relative py-[100px]">
       <div className="container">
         <div className="flex flex-col justify-center items-center text-center gap-6 tracking-[0.27px]">
           <h3 className="font-bold text-3xl sm:text-4xl md:text-[57px] md:leading-[80px] text-normal-400 max-w-[746px]">
@@ -40,12 +40,14 @@ const Roadmap: React.FC = () => {
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[21px] mt-[55px]">
-          {ROADMAPS.map((roadmap) => (
+          {ROADMAPS.map((roadmap, index) => (
             <div
-              key={roadmap.label}
+              key={index}
               className="p-6 pb-20 rounded-[14px] bg-white bg-opacity-50 shadow-type-3"
             >
-              <p className="font-bold text-black text-2xl">{roadmap.label}</p>
+              <div className="font-bold text-black text-2xl">
+                {roadmap.label}
+              </div>
               <div className="grid gap-6 mt-6">
                 {roadmap.cards.map((card, idx) => (
                   <RoadmapItem key={idx} card={card} />
