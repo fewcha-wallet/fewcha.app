@@ -12,6 +12,7 @@ const Header: React.FC = () => {
   const [showMobile, setShowMobile] = useState(false);
 
   useEffect(() => {
+    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
