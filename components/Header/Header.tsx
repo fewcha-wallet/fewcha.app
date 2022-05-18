@@ -41,7 +41,7 @@ const Header: React.FC = () => {
           <a className="block">
             <img
               src={cn({
-                "/svgs/logo.svg": !scroll,
+                "/svgs/logo-light.svg": !scroll,
                 "/svgs/alt-logo.svg": scroll,
               })}
               alt="logo"
