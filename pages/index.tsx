@@ -6,7 +6,6 @@ import SpendAndCheck from "components/Home/SpendAndCheck";
 import RoadmapSection from "components/Home/RoadmapSection";
 import Footer from "components/Footer/Footer";
 import ReadySection from "components/Home/ReadySection";
-// import HeroSection from "components/Home/HeroSection";
 import HeroSection2 from "components/Home/HeroSection2";
 import Scroll from "react-scroll";
 

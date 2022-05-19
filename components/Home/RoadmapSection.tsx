@@ -1,5 +1,6 @@
 import React from "react";
 import { ROADMAPS } from "config/constants";
+import { discordURL, tasksURL } from "config/config";
 
 const RoadmapItem: React.FC<{
   key: number;
@@ -35,9 +36,37 @@ const Roadmap: React.FC = () => {
             Our public roadmap
           </h3>
           <p className="text-normal-400 font-medium font-caption max-w-[615px]">
-            The below view is an insight into what we’re currently working on,
+            The below view is an insight into what we're currently working on,
             what's coming up and what is planned
           </p>
+          <div className="max-w-[615px] text-center mx-auto mt-2 bg-[#fffcc0] rounded-md py-4 px-6 border border-[#ff5050] bg-opacity-60">
+            Please report any bugs you find or if you would like any additional
+            features, at our{" "}
+            <a
+              href={discordURL}
+              rel="noreferrer"
+              target="_blank"
+              className="underline"
+            >
+              discord
+            </a>{" "}
+            channels: #bugs-report and #suggestion.
+            <div>
+              We log{" "}
+              <span className="text-red-500 font-bold">
+                all your contributes
+              </span>{" "}
+              at the{" "}
+              <a
+                href={tasksURL}
+                target="_blank"
+                rel="noreferrer"
+                className="underline"
+              >
+                Board
+              </a>
+            </div>
+          </div>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-[21px] mt-[55px]">
           {ROADMAPS.map((roadmap, index) => (

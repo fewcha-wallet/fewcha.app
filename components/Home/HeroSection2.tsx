@@ -1,5 +1,5 @@
 import React from "react";
-import { chromeStoreExtURL } from "config/config";
+import { chromeStoreExtURL, tasksURL } from "config/config";
 
 const HeroSection: React.FC = () => {
   return (
@@ -33,10 +33,24 @@ const HeroSection: React.FC = () => {
                 </a>
               </div>
               <div className="hidden mt-2 lg:block text-xs text-white italic font-light">
-                <span className="font-bold">*Note</span>: we just released
-                prototype version 0.1.0, aim to implement all the features. The
-                user interface will be different from the official version. The
-                image on the right this will be the official user interface.
+                <div>
+                  <span className="font-bold">*Note</span>: we just released
+                  prototype version 0.1.0, aim to implement all the features.
+                  The user interface will be different from the official
+                  version. The image on the right this will be the official user
+                  interface.
+                </div>
+                <div className="mt-2">
+                  Check our features and tasks:{" "}
+                  <a
+                    href={tasksURL}
+                    className="underline font-bold"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Board
+                  </a>
+                </div>
               </div>
             </div>
           </div>
