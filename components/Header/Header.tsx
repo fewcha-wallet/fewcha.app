@@ -43,7 +43,7 @@ const Header: React.FC = () => {
             <img
               src={cn({
                 "/svgs/logo-light.svg": !scroll,
-                "/svgs/alt-logo.svg": scroll,
+                "/svgs/logo.svg": scroll,
               })}
               alt="logo"
               className="max-w-[105px] md:max-w-[155px]"
