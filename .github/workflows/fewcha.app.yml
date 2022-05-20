@@ -60,4 +60,4 @@ jobs:
           yarn export
 
       - name: Push website to Gcloud Storage
-        run: gsutil -m rsync -d -r dist gs://fewcha.app
+        run: gsutil -m rsync -d -r out gs://fewcha.app
