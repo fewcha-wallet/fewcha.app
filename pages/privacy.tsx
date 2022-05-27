@@ -108,7 +108,7 @@ const Privacy = () => {
             <ContentContainer>
               <HeaderContent content={"PRIVACY POLICY"} />
               <p className="text-[16px]">Effective date: May 28th, 2022</p>
-              <p className="pt-[20px]">
+              <p className="pt-[16px]">
                 Fewcha Technologies, Inc. (“we”, “us” or “our”) values your
                 privacy. In this Privacy Policy (“Policy”), we describe how we
                 collect, use, and disclose information that we obtain about
@@ -117,7 +117,7 @@ const Privacy = () => {
                 applications and browser extensions (collectively, the
                 “Services”), and how we use and disclose that information.
               </p>
-              <p className="pt-[20px]">
+              <p className="pt-[16px]">
                 By visiting the Site, or using any of our Services, you agree
                 that your personal information will be handled as described in
                 this Policy. Your use of our Site or Services, and any dispute
@@ -129,7 +129,7 @@ const Privacy = () => {
             </ContentContainer>
             <ContentContainer>
               <HeaderContent content={"OVERVIEW"} />
-              <p className="pt-[20px]">
+              <p className="pt-[16px]">
                 Fewcha is a wallet app that works on the Aptos Layer 1
                 Blockchain ecosystem. In order to make it easier for users to
                 access Aptos ecosystem when participating in Aptos DApps. Fewcha
@@ -139,7 +139,7 @@ const Privacy = () => {
             </ContentContainer>
             <ContentContainer>
               <HeaderContent content={"PRIVACY"} />
-              <p className="pt-[20px]">
+              <p className="pt-[16px]">
                 Fewcha's services will absolutely not ask for cookies from users
                 participating in the Fewcha Wallet platform. Fewcha values
                 users' information and does not collect any data to use for any
@@ -149,7 +149,7 @@ const Privacy = () => {
             </ContentContainer>
             <ContentContainer>
               <HeaderContent content={"THIRD PARTY LINKS"} />
-              <p className="pt-[24px]">
+              <p className="pt-[16px]">
                 Our priority is to help users have a friendly Fewcha experience
                 and always help users avoid annoying links from third parties
                 and inability to work on the Fewcha Wallet platform. We respect
@@ -163,7 +163,7 @@ const Privacy = () => {
                   "CONDITIONS OF USE, NOTICES, CHANGES AND UPDATES TO PRIVACY NOTICE"
                 }
               />
-              <p className="pt-[20px]">
+              <p className="pt-[16px]">
                 If you choose to use Fewcha Wallet, your use and any dispute
                 over privacy is subject to this Notice and our Terms of Use. If
                 you have any concerns about privacy at Fewcha Wallet, please
@@ -179,7 +179,7 @@ const Privacy = () => {
             </ContentContainer>
             <ContentContainer>
               <HeaderContent content={"QUESTIONS"} />
-              <p className="pt-[20px]">
+              <p className="pt-[16px]">
                 We are very pleased when you send feedback or questions when
                 using the service, please send it at this address to receive the
                 earliest response from Fewcha team.
