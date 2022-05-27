@@ -15,6 +15,50 @@
     color: #232323 !important;
   }
 }
+.hambuger-black {
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  padding: 11px;
+  cursor: pointer;
+  margin-left: auto;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 99;
+  transition: opacity 0.25s ease, top 0.35s ease;
+  &::before,
+  &::after,
+  & > .line {
+    content: "";
+    background-color: #000000;
+    display: block;
+    width: 18px;
+    height: 3px;
+    transition: all 0.25s ease;
+  }
+  & .line {
+    width: 12px;
+    margin: 5px 0 5px auto;
+    opacity: 1;
+  }
+  &.is-active {
+    & > .line {
+      background-color: #000000;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateX(20px);
+      transition: all 0.25s ease, opacity 0.25s ease 0.025s;
+    }
+    &::before {
+      background-color: #000000;
+      transform: translateY(8px) rotate(45deg);
+    }
+    &::after {
+      background-color: #000000;
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+}
 
 .hambuger {
   position: relative;
