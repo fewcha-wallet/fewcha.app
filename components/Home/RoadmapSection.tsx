@@ -1,6 +1,6 @@
 import React from "react";
 import { ROADMAPS } from "config/constants";
-import { discordURL, tasksURL } from "config/config";
+import { discordURL } from "config/config";
 
 const RoadmapItem: React.FC<{
   key: number;
@@ -8,6 +8,8 @@ const RoadmapItem: React.FC<{
     title: string;
     date: string;
     list: string[];
+    tasksLabel?: string;
+    tasks?: string;
   };
 }> = ({ card }) => {
   return (
@@ -22,6 +24,19 @@ const RoadmapItem: React.FC<{
             <li key={index}>{item}</li>
           ))}
         </ul>
+      )}
+      {card.tasks && (
+        <div className="mt-2 text-sm">
+          <span className="font-bold">Check detail</span>{" "}
+          <a
+            href={card.tasks}
+            className=" font-bold underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {card.tasksLabel}
+          </a>
+        </div>
       )}
     </div>
   );
@@ -55,16 +70,7 @@ const Roadmap: React.FC = () => {
               We log{" "}
               <span className="text-red-500 font-bold">
                 all your contributes
-              </span>{" "}
-              at the{" "}
-              <a
-                href={tasksURL}
-                target="_blank"
-                rel="noreferrer"
-                className="underline"
-              >
-                Board
-              </a>
+              </span>
             </div>
           </div>
         </div>

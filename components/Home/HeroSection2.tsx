@@ -1,5 +1,5 @@
 import React from "react";
-import { chromeStoreExtURL, tasksURL } from "config/config";
+import { chromeStoreExtURL, tasks0_1URL, tasks0_2URL } from "config/config";
 
 const HeroSection: React.FC = () => {
   return (
@@ -43,12 +43,20 @@ const HeroSection: React.FC = () => {
                 <div className="mt-2">
                   Check our features and tasks:{" "}
                   <a
-                    href={tasksURL}
+                    href={tasks0_1URL}
                     className="underline font-bold"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Board
+                    Prototype 0.1
+                  </a>
+                  <a
+                    href={tasks0_2URL}
+                    className="underline font-bold ml-2"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Prototype 0.2
                   </a>
                 </div>
               </div>
