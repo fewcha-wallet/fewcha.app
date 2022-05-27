@@ -1,15 +1,14 @@
-import Header from "components/Header/Header";
 import Link from "next/link";
 import cn from "services/cn";
 import { MENUS } from "config/constants";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import MobileMenu from "components/Header/MobileMenu";
 import { chromeStoreExtURL } from "config/config";
 
-const HeaderContent: React.FC<{ content: string }> = ({ content }) => {
+export const HeaderContent: React.FC<{ content: string }> = ({ content }) => {
   return <h2 className="font-bold text-[40px] leading-[3.5rem]">{content}</h2>;
 };
-const ContentContainer: React.FC<{ children?: React.ReactNode }> = ({
+export const ContentContainer: React.FC<{ children?: React.ReactNode }> = ({
   children,
 }) => {
   return <div>{children}</div>;
@@ -106,7 +105,6 @@ const Privacy = () => {
           </header>
           <div className="flex flex-col gap-16 font-medium leading-6 pt-[32px]">
             <ContentContainer>
-              <HeaderContent content={"PRIVACY POLICY"} />
               <p className="text-[16px]">Effective date: May 28th, 2022</p>
               <p className="pt-[16px]">
                 Fewcha Technologies, Inc. (“we”, “us” or “our”) values your
