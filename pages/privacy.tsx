@@ -142,7 +142,13 @@ const Privacy = () => {
                 participating in the Fewcha Wallet platform. Fewcha values
                 users' information and does not collect any data to use for any
                 other purpose for third parties. If you see items that require
-                your browser's cookies, please email us at community@fewcha.app.
+                your browser's cookies, please email us at{" "}
+                {
+                  <p className="inline-block text-blue-600">
+                    community@fewcha.app
+                  </p>
+                }
+                .
               </p>
             </ContentContainer>
             <ContentContainer>
@@ -152,7 +158,13 @@ const Privacy = () => {
                 and always help users avoid annoying links from third parties
                 and inability to work on the Fewcha Wallet platform. We respect
                 the user experience, if you see links appearing on the Fewcha
-                platform, please contact us via email: community@fewcha.app.
+                platform, please contact us via email:{" "}
+                {
+                  <p className="inline-block text-blue-600">
+                    community@fewcha.app
+                  </p>
+                }
+                .
               </p>
             </ContentContainer>
             <ContentContainer>
