@@ -5,6 +5,7 @@ import { MENUS } from "config/constants";
 import MobileMenu from "components/Header/MobileMenu";
 import { chromeStoreExtURL } from "config/config";
 import { ContentContainer, HeaderContent } from "./privacy";
+import Footer from "components/Footer/Footer";
 
 const Terms = () => {
   const [showMobile, setShowMobile] = useState(false);
@@ -17,8 +18,8 @@ const Terms = () => {
     }
   };
   return (
-    <section className="bg-white pb-12">
-      <div className="container">
+    <section className="bg-white">
+      <div className="container pb-12">
         <div className="flex flex-col justify-center">
           <header
             className={cn(
@@ -1218,6 +1219,7 @@ const Terms = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </section>
   );
 };

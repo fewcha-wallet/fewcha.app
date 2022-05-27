@@ -1,6 +1,15 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   reactStrictMode: true,
-}
 
-module.exports = nextConfig
+  exportPathMap: async function () {
+    return {
+      "/": { page: "/" },
+      "/privacy": { page: "/privacy" },
+      "/terms": { page: "/terms" },
+    };
+  },
+};
+
+module.exports = nextConfig;

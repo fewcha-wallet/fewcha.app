@@ -4,6 +4,7 @@ import { MENUS } from "config/constants";
 import React, { useState } from "react";
 import MobileMenu from "components/Header/MobileMenu";
 import { chromeStoreExtURL } from "config/config";
+import Footer from "components/Footer/Footer";
 
 export const HeaderContent: React.FC<{ content: string }> = ({ content }) => {
   return <h2 className="font-bold text-[40px] leading-[3.5rem]">{content}</h2>;
@@ -25,8 +26,8 @@ const Privacy = () => {
     }
   };
   return (
-    <section className="bg-white pb-12">
-      <div className="container">
+    <section className="bg-white">
+      <div className="container pb-12">
         <div className="flex flex-col justify-center">
           <header
             className={cn(
@@ -198,6 +199,7 @@ const Privacy = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </section>
   );
 };
