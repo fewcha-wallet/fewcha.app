@@ -963,7 +963,7 @@ const Terms = () => {
                 Fewcha wants to address your concerns without the need for a
                 formal legal dispute. Before filing a claim against Fewcha, you
                 agree to try to resolve the Dispute informally by contacting
-                Fewcha at support@Fewcha.app to notify Fewcha of the actual or
+                Fewcha at community@fewcha.app to notify Fewcha of the actual or
                 potential Dispute. Similarly, Fewcha will undertake reasonable
                 efforts to contact you to notify you of any actual or potential
                 dispute to resolve any claim we may possess informally before
@@ -1008,7 +1008,7 @@ const Terms = () => {
               <p className="pt-[16px]">
                 If you do not wish to be subject to this agreement to arbitrate,
                 you may opt out of this arbitration provision by sending a
-                written notice to Fewcha at support@Fewcha.app within thirty
+                written notice to Fewcha at community@fewcha.app within thirty
                 (30) days of first accepting this Agreement. You must date the
                 written notice, and include your first and last name, address,
                 and a clear statement that you do not wish to resolve disputes
@@ -1210,7 +1210,7 @@ const Terms = () => {
                 please contact us at{" "}
                 {
                   <p className="text-blue-600 inline-block">
-                    support@Fewcha.app
+                    community@fewcha.app
                   </p>
                 }
                 .
