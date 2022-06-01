@@ -196,6 +196,9 @@ const Privacy = () => {
                 earliest response from Fewcha team.
               </p>
             </ContentContainer>
+            <ContentContainer>
+              <p className="pt-[16px]">community@fewcha.app</p>
+            </ContentContainer>
           </div>
         </div>
       </div>
