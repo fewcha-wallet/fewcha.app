@@ -1,5 +1,10 @@
 import React from "react";
-import { chromeStoreExtURL, tasks0_1URL, tasks0_2URL } from "config/config";
+import {
+  chromeStoreExtURL,
+  discordURL,
+  tasks0_1URL,
+  tasks0_2URL,
+} from "config/config";
 
 const HeroSection: React.FC = () => {
   return (
@@ -58,6 +63,29 @@ const HeroSection: React.FC = () => {
                   >
                     Prototype 0.2
                   </a>
+                </div>
+              </div>
+            </div>
+            <div className="mt-9 xl:mt-8 gap-3 flex flex-col">
+              <div>
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href={discordURL}
+                  className="bg-purple-100 text-sm inline-block shadow-type-2 px-[24px] py-[15px] font-semibold rounded-[34px]"
+                >
+                  <div className="flex items-center gap-3">
+                    Click to join the discord channel{" "}
+                    <img src="/svgs/discord.svg" alt="Discord" />
+                  </div>
+                </a>
+              </div>
+              <div className="hidden mt-2 lg:block text-xs text-white italic font-light">
+                <div>
+                  <span className="font-bold">*Note</span>: By joining the
+                  Fewcha - Aptos Wallet Discord Community, you could able to
+                  have a regular update on what is happening in this Wallet - a
+                  new wallet for the Aptos Blockchain
                 </div>
               </div>
             </div>
