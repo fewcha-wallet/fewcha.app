@@ -1,17 +1,25 @@
 import React from "react";
-import { MENUS } from "config/constants";
+import { MENU_MOBILE } from "config/constants";
 import Link from "next/link";
 import AtButton from "components/AtButton";
 
 const MobileMenu: React.FC<{ isShow: boolean }> = ({ isShow }) => {
   return (
     <div
-      className={`lg:hidden bg-[url('/images/road-map-background.png')] bg-cover bg-no-repeat bg-white list ${
-        isShow ? "is-active" : ""
-      }`}
+      className={`lg:hidden bg-[url('/images/road-map-background.png')] bg-cover bg-no-repeat bg-white list ${isShow ? "is-active" : ""
+        }`}
     >
+      <Link href="/">
+        <a className="block absolute top-6">
+          <img
+            src="/svgs/logo.svg"
+            alt="logo"
+            className="max-w-[105px] md:max-w-[155px]"
+          />
+        </a>
+      </Link>
       <div className="hambugerBg"></div>
-      {MENUS.map((menu, idx) => {
+      {MENU_MOBILE.map((menu, idx) => {
         if (menu.external) {
           return (
             <a
@@ -19,7 +27,7 @@ const MobileMenu: React.FC<{ isShow: boolean }> = ({ isShow }) => {
               key={idx}
               target="_blank"
               rel="noreferrer"
-              className="block text-normal-400 font-medium text-3xl transition-all ease-in duration-150 hover:text-primary-200  py-4 text-center"
+              className="block text-normal-400 font-bold text-[36px] leading-[120%] font-larken transition-all ease-in duration-150 hover:text-[#007EFB] py-4 text-left"
             >
               {menu.name}
             </a>
@@ -29,7 +37,7 @@ const MobileMenu: React.FC<{ isShow: boolean }> = ({ isShow }) => {
         if (menu.href) {
           return (
             <Link href={menu.href} key={idx}>
-              <a className="block text-normal-400 font-medium text-3xl transition-all ease-in duration-150 hover:text-primary-200  py-4 text-center">
+              <a className="block text-normal-400 font-bold text-[36px] leading-[120%] font-larken transition-all ease-in duration-150 hover:text-[#007EFB] py-4 ">
                 {menu.name}
               </a>
             </Link>
@@ -39,10 +47,16 @@ const MobileMenu: React.FC<{ isShow: boolean }> = ({ isShow }) => {
         return null;
       })}
       <a href="https://fewcha.app" target="_blank" rel="noreferrer">
-        <AtButton className="inline-block sm:hidden shadow-type-1 px-5 py-[14px] bg-white text-black font-medium rounded-[34px] hover:bg-inherit mt-5">
-          Download
+        <AtButton className="hidden inline-block shadow-type-1 px-5 py-[14px] bg-[#14161A] text-white font-medium rounded-[34px] mt-8 text-[18px] leading-[120%] ">
+          Connect wallet
         </AtButton>
       </a>
+      <div className="flex flex-row py-20 mt-14">
+        <img className="mr-9 h-[30px]" src="/svgs/medium-mobile.svg" alt="Medium" />
+        <img className="mr-9 h-[30px]" src="/svgs/discord-mobile.svg" alt="Discord" />
+        <img className="mr-9 h-[30px]" src="/svgs/twitter-mobile.svg" alt="Twitter" />
+        <img className="mr-9 h-[30px]" src="/svgs/telegram-mobile.svg" alt="Telegram" />
+      </div>
     </div>
   );
 };

@@ -2,11 +2,12 @@ import Head from "next/head";
 import type { NextPage } from "next";
 import { Fragment } from "react";
 import Header from "components/Header/Header";
-import SpendAndCheck from "components/Home/SpendAndCheck";
+import UnlockSection from "components/Home/UnlockSection";
 import RoadmapSection from "components/Home/RoadmapSection";
 import Footer from "components/Footer/Footer";
-import ReadySection from "components/Home/ReadySection";
-import HeroSection2 from "components/Home/HeroSection2";
+import JoinSection from "components/Home/JoinSection";
+import FutureSection from "components/Home/FutureSection";
+import InstallSection from "components/Home/InstallSection";
 import Scroll from "react-scroll";
 
 const Element = Scroll.Element;
@@ -122,12 +123,13 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <main>
-        <HeroSection2 />
-        <SpendAndCheck />
+        <FutureSection />
+        <UnlockSection />
         <Element name="roadmap">
           <RoadmapSection />
         </Element>
-        <ReadySection />
+        <InstallSection />
+        <JoinSection />
       </main>
       <Footer />
     </Fragment>

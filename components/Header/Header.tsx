@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
+import { homeURL } from 'config/config';
 import { MENUS } from "config/constants";
-import MobileMenu from "./MobileMenu";
-import { chromeStoreExtURL } from "config/config";
-import cn from "services/cn";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
 import Scroll from "react-scroll";
+import cn from "services/cn";
+import MobileMenu from "./MobileMenu";
 import scroller = Scroll.scroller;
 
 const Header: React.FC = () => {
@@ -37,14 +37,11 @@ const Header: React.FC = () => {
         }
       )}
     >
-      <div className="container xs:px-13 flex items-center">
+      <div className="container flex items-center">
         <Link href="/">
           <a className="block">
             <img
-              src={cn({
-                "/svgs/logo-light.svg": !scroll,
-                "/svgs/logo.svg": scroll,
-              })}
+              src="/svgs/logo.svg"
               alt="logo"
               className="max-w-[105px] md:max-w-[155px]"
             />
@@ -60,7 +57,7 @@ const Header: React.FC = () => {
                   key={idx}
                   target="_blank"
                   rel="noreferrer"
-                  className="header-link py-2 block text-white font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200"
+                  className="header-link py-2 block text-[#292C33] font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200"
                 >
                   {menu.name}
                 </a>
@@ -71,18 +68,7 @@ const Header: React.FC = () => {
               return (
                 <Link href={menu.href} key={idx}>
                   <a
-                    onClick={(e) => {
-                      if (menu.href === "/#roadmap") {
-                        e.preventDefault();
-                        scroller.scrollTo("roadmap", {
-                          duration: 500,
-                          delay: 50,
-                          smooth: true,
-                          offset: -90,
-                        });
-                      }
-                    }}
-                    className="header-link py-2 block text-white font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200"
+                    className="header-link py-2 block text-[#292C33] font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200"
                   >
                     {menu.name}
                   </a>
@@ -96,18 +82,19 @@ const Header: React.FC = () => {
 
         <div className="relative ml-auto flex items-center gap-6">
           <a
-            href={chromeStoreExtURL}
-            target="_blank"
-            rel="noreferrer"
-            className="hidden sm:inline-block px-6 py-[14px] bg-[#007EFB] text-white font-medium rounded-[34px]"
+            href={homeURL}
+            target="_top"
+            className="hidden lg:block px-4 py-3 bg-[#4658E2] text-white font-medium rounded-[100px] w-[188px]"
           >
-            Download
+            <div className="flex gap-x-1.5">
+              <img src="/svgs/discord.svg" alt="discord" />
+              <span>Felling Chatty?</span>
+            </div>
           </a>
 
           <div
-            className={`block lg:hidden hambuger ${
-              showMobile ? "is-active" : ""
-            }`}
+            className={`block lg:hidden hambuger ${showMobile ? "is-active" : ""
+              }`}
             onClick={toggleMobile}
           >
             <span className="line"></span>

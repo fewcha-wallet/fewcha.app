@@ -1,18 +1,43 @@
 .hero-section-bg {
-  background-image: url("/images/bg2.svg"), url("/images/bg1.svg");
-  background-position: bottom center, bottom center;
-  background-repeat: no-repeat, no-repeat;
-  background-size: contain, cover;
+  @media(min-width: 768px) {
+    background-image: url("/images/bg4.png");
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.contributor-section-bg {
+  background-image: url("/images/bg-contributor-mobile.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: 100%;
+
+  @media(min-width: 769px) {
+    background-image: url("/images/bg-contributor.png");
+    background-position: 52px 56px;
+    background-size: contain;
+  }
+
+  @media(min-width: 1024px) {
+    background-position: 52px 8px;
+    background-size: cover
+  }
+}
+
+.get-app-bg {
+  background-image: url("/images/bg-getapp-contributor.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .gradient {
-  background: linear-gradient(
-    90deg,
-    #dff4a4 0%,
-    #66acff 26.1%,
-    #bd7bff 45.6%,
-    #ff7bba 63.44%
-  );
+  background: linear-gradient(90deg,
+      #dff4a4 0%,
+      #66acff 26.1%,
+      #bd7bff 45.6%,
+      #ff7bba 63.44%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
