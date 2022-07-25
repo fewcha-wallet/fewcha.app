@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
               <img src="/svgs/logo-black.svg" alt="Logo" />
             </a>
           </Link>
-          <div>
+          <div className="mt-2.5">
             {FOOTER_MENU.map((item, index) => {
               if (item.external) {
                 return (

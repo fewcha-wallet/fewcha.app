@@ -30,7 +30,7 @@ const UnlockSection: React.FC = () => {
                   </div>
                   <img src={imgPhone} alt="Iphone12" className={cn("absolute z-30 hidden lg:block", `${isId1Or3 ? "right" : "left"}-0`, `${isId1Or2 ? "bottom" : "top"}-0`)} />
 
-                  <div className={cn("absolute w-full h-2/4 bottom-0 left-0 blur-[55px] z-20", {
+                  <div className={cn("absolute w-full h-2/4 bottom-0 left-0 blur-[44px] z-20", {
                     "bg-bottom1": id === 1,
                     "bg-bottom2": id === 2,
                     "bg-bottom3": id === 3,

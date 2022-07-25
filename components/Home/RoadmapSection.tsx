@@ -16,14 +16,14 @@ const RoadmapSection: React.FC = () => {
 
           {content.map((item, i) => {
             return (
-              <div key={i} className={cn("lg:w-[21.9%] relative md:mb-0", {
+              <div key={i} className={cn("lg:w-[21.9%] relative md:mb-0 ", {
                 "mb-[52px]": i === 0,
                 "mb-[148px]": i === 1,
                 "mb-[328px]": i === 2,
                 "mb-[300px]": i === 3,
               })}>
-                <div className="text-center w-[250px] h-[250px] lg:w-[229px] lg:h-[230px] rounded-full bg-roadmap -rotate-90">
-                  <p className="rotate-90 absolute top-[37%] left-[66%] text-[36px] font-medium leading-[130%]">Q{i + 1}</p>
+                <div className="text-center w-[229.72px] h-[229.72px]  max-h-full rounded-full -rotate-90 bg-roadmap">
+                  <p className="rotate-90 absolute top-[37%] left-[62%] text-[36px] font-medium leading-[130%]">Q{i + 1}</p>
                 </div>
                 <div className="bg-roadmap4 absolute top-[125px] w-full p-9">
                   {item.map((v, j) => (
@@ -31,7 +31,7 @@ const RoadmapSection: React.FC = () => {
                       <img src={i <= 1 ? checkIcon : descIcon} alt="Icon" className={cn("", {
                         "absolute -left-2.5 top-2": i > 1
                       })} />
-                      <p className="text-[16px] leading-[137%] font-black">{v}</p>
+                      <p className="text-[16px] leading-[137%]">{v}</p>
                     </div>
                   ))}
                 </div>

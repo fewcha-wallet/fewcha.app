@@ -8,7 +8,7 @@ const PredictSection: React.FC = () => {
       <div className="container">
         <div className="lg:w-[418px] text-[#292C33]">
           <h1 className="pt-[90px] sm:pt-[58px] font-larken text-[40px] ] leading-[120%] font-medium text-center px-6 md:px-0 md:text-[48px md:leading-[119%] md:w-[418px] md:text-left lg:pr-[95px]">{title}</h1>
-          <p className="hidden lg:block text-[20px] leading-[153%] mt-6">{des}</p>
+          <p className="hidden lg:block text-[18px] leading-[153%] mt-6 font-medium">{des}</p>
         </div>
       </div>
     </section>

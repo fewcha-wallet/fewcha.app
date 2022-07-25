@@ -1,4 +1,4 @@
-import { homeURL } from 'config/config';
+import { discordURL } from 'config/config';
 import { MENUS } from "config/constants";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
@@ -91,9 +91,10 @@ const Header: React.FC = () => {
 
         <div className="relative ml-auto flex items-center gap-6">
           <a
-            href={homeURL}
-            target="_top"
-            className="hidden lg:block px-4 py-3 bg-[#4658E2] text-white font-medium rounded-[100px] w-[188px]"
+            href={discordURL}
+            target="_blank"
+            rel="noreferrer"
+            className="hidden lg:block px-4 py-3 bg-[#4658E2] text-white font-medium rounded-[100px] w-[188px] hover:opacity-[0.9] transition-all"
           >
             <div className="flex gap-x-1.5">
               <img src="/svgs/discord.svg" alt="discord" />

@@ -51,15 +51,15 @@ export const MENU_MOBILE = [
     name: "Contributors",
   },
   {
-    external: 'mediumURL',
+    external: mediumURL,
     name: "Docs",
   },
   {
-    external: "/",
+    external: discordURL,
     name: "Community",
   },
   {
-    href: "/",
+    external: discordURL,
     name: "NFTs Playground",
   },
 ]
@@ -192,19 +192,19 @@ export const MEET_SECTION = {
       des: "Whatever"
     },
     {
-      srcImg: "/images/contributor_person_4.png",
+      srcImg: "/images/contributor_person_5.png",
       name: "Pierre",
       jobName: "Chief Technology Officer ",
       des: "Build blockchain from scratch"
     },
     {
-      srcImg: "/images/contributor_person_5.png",
+      srcImg: "/images/contributor_person_7.png",
       name: "Leon",
       jobName: "Head of Design",
       des: "Make things pretty and usable"
     },
     {
-      srcImg: "/images/contributor_person_4.png",
+      srcImg: "/images/contributor_person_5.png",
       name: "Yueru",
       jobName: "Head of Communication",
       des: "Build blockchain from scratch"
@@ -216,7 +216,7 @@ export const MEET_SECTION = {
       des: "Make things pretty and usable"
     },
     {
-      srcImg: "/images/contributor_person_4.png",
+      srcImg: "/images/contributor_person_7.png",
       name: "Vien Le",
       jobName: "Chief Technology Officer",
       des: "Build blockchain from scratch"
@@ -240,5 +240,5 @@ export const GET_APP_SECTION = {
   title: "Get Fewcha app now!",
   des: "You are just 1-click away from an amazing promised universe of Aptoverse. So what are you waiting for?",
   title2: "Get the extension",
-  linkExt:chromeStoreExtURL,
+  linkExt: chromeStoreExtURL,
 }
