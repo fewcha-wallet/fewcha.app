@@ -6,10 +6,15 @@ import Scroll from "react-scroll";
 import cn from "services/cn";
 import MobileMenu from "./MobileMenu";
 import scroller = Scroll.scroller;
+import { useRouter } from 'next/router';
+
 
 const Header: React.FC = () => {
   const [scroll, setScroll] = useState(false);
   const [showMobile, setShowMobile] = useState(false);
+  const [indexActive, setIndexActive] = useState(0)
+
+  const router = useRouter()
 
   useEffect(() => {
     handleScroll();
@@ -27,6 +32,7 @@ const Header: React.FC = () => {
     else document.body.style.overflow = "hidden";
   };
 
+  console.log(indexActive)
   return (
     <header
       className={cn(
@@ -38,7 +44,7 @@ const Header: React.FC = () => {
       )}
     >
       <div className="container flex items-center">
-        <Link href="/">
+        <Link href="/" className="active">
           <a className="block">
             <img
               src="/svgs/logo.svg"
@@ -49,15 +55,15 @@ const Header: React.FC = () => {
         </Link>
 
         <div className="hidden lg:flex items-center justify-center flex-1 gap-x-10">
-          {MENUS.map((menu, idx) => {
+          {MENUS.map((menu, i) => {
             if (menu.external) {
               return (
                 <a
                   href={menu.external}
-                  key={idx}
+                  key={i}
                   target="_blank"
                   rel="noreferrer"
-                  className="header-link py-2 block text-[#292C33] font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200"
+                  className={cn("header-link py-2 block text-[#292C33] font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200")}
                 >
                   {menu.name}
                 </a>
@@ -66,9 +72,12 @@ const Header: React.FC = () => {
 
             if (menu.href) {
               return (
-                <Link href={menu.href} key={idx}>
+                <Link href={menu.href} key={i} >
                   <a
-                    className="header-link py-2 block text-[#292C33] font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200"
+                    onClick={() => setIndexActive(i)}
+                    className={cn("header-link py-2 block text-[#292C33] font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200 ", {
+                      'text-primary-200': router.pathname === menu.href
+                    })}
                   >
                     {menu.name}
                   </a>
@@ -102,7 +111,7 @@ const Header: React.FC = () => {
         </div>
       </div>
       <MobileMenu isShow={showMobile} />
-    </header>
+    </header >
   );
 };
 

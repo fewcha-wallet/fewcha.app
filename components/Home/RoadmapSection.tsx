@@ -3,7 +3,7 @@ import { ROADMAP_SECTION } from 'config/constants'
 import cn from 'services/cn'
 
 const RoadmapSection: React.FC = () => {
-  const { title, des, content } = ROADMAP_SECTION
+  const { title, des, content, checkIcon, descIcon } = ROADMAP_SECTION
   return (
     <section className="bg-[#000000] pt-[54px] pb-12 md:pb-[332px] lg:pb-[400px]">
       <div className="container">
@@ -16,19 +16,22 @@ const RoadmapSection: React.FC = () => {
 
           {content.map((item, i) => {
             return (
-              <div key={i} className={cn("lg:w-[21.9%] relative md:mb-0",{
+              <div key={i} className={cn("lg:w-[21.9%] relative md:mb-0", {
                 "mb-[52px]": i === 0,
                 "mb-[148px]": i === 1,
                 "mb-[328px]": i === 2,
-                "mb-[300px]": i === 3, 
+                "mb-[300px]": i === 3,
               })}>
                 <div className="text-center w-[250px] h-[250px] lg:w-[229px] lg:h-[230px] rounded-full bg-roadmap -rotate-90">
                   <p className="rotate-90 absolute top-[37%] left-[66%] text-[36px] font-medium leading-[130%]">Q{i + 1}</p>
                 </div>
                 <div className="bg-roadmap4 absolute top-[125px] w-full p-9">
                   {item.map((v, j) => (
-                    <div key={j}>
-                      <p className="text-[16px] leading-[137%] pb-2 font-black">{v}</p>
+                    <div key={j} className="flex items-start gap-x-1 pb-2 relative">
+                      <img src={i <= 1 ? checkIcon : descIcon} alt="Icon" className={cn("", {
+                        "absolute -left-2.5 top-2": i > 1
+                      })} />
+                      <p className="text-[16px] leading-[137%] font-black">{v}</p>
                     </div>
                   ))}
                 </div>

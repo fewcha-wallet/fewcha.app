@@ -1,13 +1,13 @@
-import Head from "next/head";
-import type { NextPage } from "next";
-import { Fragment } from "react";
-import Header from "components/Header/Header";
-import UnlockSection from "components/Home/UnlockSection";
-import RoadmapSection from "components/Home/RoadmapSection";
 import Footer from "components/Footer/Footer";
-import JoinSection from "components/Home/JoinSection";
+import Header from "components/Header/Header";
 import FutureSection from "components/Home/FutureSection";
 import InstallSection from "components/Home/InstallSection";
+import JoinSection from "components/Home/JoinSection";
+import RoadmapSection from "components/Home/RoadmapSection";
+import UnlockSection from "components/Home/UnlockSection";
+import type { NextPage } from "next";
+import Head from "next/head";
+import { Fragment } from "react";
 import Scroll from "react-scroll";
 
 const Element = Scroll.Element;

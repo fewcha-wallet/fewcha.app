@@ -12,11 +12,11 @@ const JoinSection: React.FC = () => {
             <h3 className="text-[36px] font-medium leading-[102%] font-larken md:text-[62px] lg:text-[80px]">{title}</h3>
             <p className="text-[16px] font-normal leading-[140%] px-[30px] md:px-0 md:text-[18px] md:leading-[180%] pt-4">{des}</p>
           </div>
-          <div className="flex flex-wrap  flex-col gap-[10px] items-center md:flex-row">
+          <div className="flex flex-wrap flex-col gap-[10px] items-center md:flex-row">
             {links.map((link, i) => (
               <a
                 key={i}
-                className="cursor-pointer block bg-[#000000] lg:bg-[#292C33] py-2 px-[18px] rounded-[121px] w-[137px]"
+                className="cursor-pointer block bg-[#000000] lg:bg-[#292C33] py-2 px-[18px] rounded-[121px] w-[137px] hover:opacity-[0.9]"
                 href={link.href}
                 target="_blank"
                 rel="noreferrer"

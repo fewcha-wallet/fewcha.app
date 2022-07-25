@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <div className="max-w-[475px] mx-auto flex flex-col justify-between items-center gap-y-9 md:flex-row">
           <Link href='/'>
             <a className="w-[113px] h-6 md:w-[150px] md:h-8">
-              <img src="/svgs/new-logo.svg" alt="Logo" />
+              <img src="/svgs/logo-black.svg" alt="Logo" />
             </a>
           </Link>
           <div>

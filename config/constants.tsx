@@ -2,7 +2,8 @@ import {
   discordURL,
   mediumURL,
   telegramURL,
-  twitterURL
+  twitterURL,
+  chromeStoreExtURL
 } from "config/config";
 
 export const MENUS = [
@@ -11,7 +12,7 @@ export const MENUS = [
     name: "Home",
   },
   {
-    href: "contributor",
+    href: "/contributor",
     name: "Contributors",
   },
   {
@@ -28,7 +29,7 @@ export const MENUS = [
 
 export const FOOTER_MENU = [
   {
-    href: "/",
+    href: "/contributor",
     label: "Contributors",
   },
   {
@@ -46,7 +47,7 @@ export const MENU_MOBILE = [
     name: "Home",
   },
   {
-    href: "/",
+    href: "/contributor",
     name: "Contributors",
   },
   {
@@ -64,10 +65,11 @@ export const MENU_MOBILE = [
 ]
 
 export const FUTURE_SECTION = {
-  description: 'Simple, Elegant and Easy to use.Available on iOS, Chrome and more',
+  description: 'Simple, Elegant and Easy to use. Available on iOS, Chrome and more',
   getExt: 'Get Extension',
   imgExt: "svgs/chrome2.svg",
-  imgBgMobile: "images/bg-mobile-hero.png"
+  imgBgMobile: "images/bg-mobile-hero.png",
+  linkExt: chromeStoreExtURL
 }
 
 export const PREDICT_SECTION = {
@@ -115,6 +117,8 @@ export const UNLOCK_SECTION = {
 export const ROADMAP_SECTION = {
   title: "Our roadmap in 2022",
   des: "The below view is an insight into what we're currently working on, what's coming up and what is planned. We will update regularly",
+  checkIcon: '/svgs/check-solid.svg',
+  descIcon: "/svgs/circle-solid.svg",
   content: [
     ['Initial Research', 'Trend Analytics', 'Tech Possibility Validation'],
     ['Product Conceptualization', 'UI/UX Design', 'Chrome Extension v0.1 & v0.2 Development', 'Web3 Connection v0.1.0 Development (Web3.js)'],
@@ -127,6 +131,7 @@ export const INSTALL_SECTION = {
   title: 'Install Fewcha to explore the Aptoverse',
   des: 'You are just 1-click away from an amazing promised world of Aptos. What are you waiting for?',
   more: 'Get Extension',
+  linkExt: chromeStoreExtURL
 }
 
 export const JOIN_SECTION = {
@@ -159,8 +164,8 @@ export const JOIN_SECTION = {
 export const MEET_SECTION = {
   title: "Meet our contributors",
   des: "We are a group of talented engineers, designers and strategists with a lot of experiences in blockchain and fintech. We always welcome talents from all over the world to build Fewcha together",
-  all: "All",
   list: [
+    "All",
     "Blockchain Engineer (1)",
     "Front-End Engineer (2)",
     "Designer (1)",
@@ -231,10 +236,9 @@ export const MEET_SECTION = {
   ]
 }
 
-export const GET_APP_SECTION ={
-  title:"Get Fewcha app now!",
-  des:"You are just 1-click away from an amazing promised universe of Aptoverse. So what are you waiting for?",
-  title2:"Get the extension"
-  // srcExt:"",
-
+export const GET_APP_SECTION = {
+  title: "Get Fewcha app now!",
+  des: "You are just 1-click away from an amazing promised universe of Aptoverse. So what are you waiting for?",
+  title2: "Get the extension",
+  linkExt:chromeStoreExtURL,
 }
