@@ -1,25 +1,29 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { MEET_SECTION } from 'config/constants'
 import cn from 'services/cn'
 
 const MeetSection: React.FC = () => {
   const { title, des, list, members } = MEET_SECTION
   const [index, setIndex] = useState(0)
-  const [listFilter, setFilter] = useState(list)
+  const [valueFilter, setValueFilter] = useState('all')
+  const [listFilter, setFilter] = useState(members)
 
   const handleActive = (i: number, item: string) => {
     setIndex(i)
-    const resultFilter = members.filter(m => {
-      if (item.toLowerCase() === 'all') {
-        console.log(item.toLowerCase());
-
-        return m
-      } else {
-
-      }
-      console.log(resultFilter)
-    })
+    setValueFilter(item.toLowerCase())
   }
+
+  useEffect(() => {
+    console.log('run...')
+    if (valueFilter === 'all') {
+      setFilter(members)
+    } else if (valueFilter.includes('core')) {
+      setFilter(members.filter(m => m.position === 'core'))
+    } else {
+      setFilter(members.filter(m => valueFilter.includes(m.position)))
+    }
+
+  }, [valueFilter, members])
 
   return (
     <section className='w-full py-[120px]'>
@@ -38,8 +42,8 @@ const MeetSection: React.FC = () => {
           ))}
         </div>
 
-        <div className='flex flex-wrap gap-y-8 md:gap-y-12 md:gap-x-5 flex-col justify-between md:flex-row'>
-          {members.map((member, i) => (
+        <div className='flex flex-wrap gap-y-8 md:gap-y-12 md:gap-x-5 flex-col justify-start md:flex-row'>
+          {listFilter.map((member, i) => (
             <div key={i} className="md:w-[31%] text-[#292C33]">
               <img src={member.srcImg} alt={member.name} className="w-full max-h-[327px] mb-6" />
               <p className='mb-2 font-larken text-[20px] leading-[119%] font-medium'>{member.name}</p>

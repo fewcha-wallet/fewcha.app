@@ -36,7 +36,7 @@ const Header: React.FC = () => {
   return (
     <header
       className={cn(
-        "white fixed top-0 left-0 right-0 w-full z-[999] transition-all ease-in-out duration-300",
+        "white fixed top-0 left-0 right-0 w-full z-[9999] transition-all ease-in-out duration-300",
         {
           "is-scroll": scroll,
           "py-5 lg:py-5": !scroll,

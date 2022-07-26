@@ -12,17 +12,17 @@ const RoadmapSection: React.FC = () => {
           <p className="text-white text-center max-w-[574px] text-[16px] md:text-[18px] mb-12  leading-[140%] mx-auto">{des}</p>
         </div>
 
-        <div className=" text-white md:gap-7 flex flex-wrap lg:w-full md:justify-center justify-center md:gap-y-[204px]">
+        <div className=" text-white md:gap-x-8 lg:gap-x-[15.2px] flex flex-wrap lg:w-full md:justify-center lg:justify-between md:gap-y-[204px]">
 
           {content.map((item, i) => {
             return (
-              <div key={i} className={cn("lg:w-[21.9%] relative md:mb-0 ", {
+              <div key={i} className={cn("w-[250px] h-auto relative md:mb-0 ", {
                 "mb-[72px]": i === 0,
                 "mb-[212px]": i === 1,
                 "mb-[344px]": i === 2,
                 "mb-[364px]": i === 3,
               })}>
-                <div className="text-center w-[229.72px] h-[229.72px]  max-h-full rounded-full -rotate-90 bg-roadmap">
+                <div className="text-center w-[250px] h-[250px]  rounded-full -rotate-90 bg-roadmap">
                   <p className="rotate-90 absolute top-[37%] left-[62%] text-[36px] font-medium leading-[130%]">Q{i + 1}</p>
                 </div>
                 <div className="bg-roadmap4 absolute top-[125px] w-full p-9">

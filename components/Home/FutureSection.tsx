@@ -14,7 +14,7 @@ const FutureSection: React.FC = () => {
             {description}
           </p>
           <a href={linkExt} target="_blank" rel="noreferrer" className="flex justify-between items-center bg-[#14161A] max-w-[186px] max-h-[48px] text-white px-6 py-[13px] text-center text-[17px] leading-[120%] rounded-[100px] hover:cursor-pointer hover:opacity-[0.92] font-medium">
-            <img src={imgExt} alt="Download" width={24} />
+            <img src={imgExt} alt="Download" width={24} className="mr-1"/>
             <span>
               {getExt}
             </span>

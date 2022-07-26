@@ -2,20 +2,23 @@ import React from "react";
 import { MENU_MOBILE } from "config/constants";
 import Link from "next/link";
 import AtButton from "components/AtButton";
+import { link } from "fs";
 
 const MobileMenu: React.FC<{ isShow: boolean }> = ({ isShow }) => {
+  const { routerList, links } = MENU_MOBILE
+
   return (
     <div
       className={`lg:hidden bg-[url('/images/road-map-background.png')] bg-cover bg-no-repeat bg-white list mt-[80px] ${isShow ? "is-active" : ""
         }`}
     >
       <div className="hambugerBg"></div>
-      {MENU_MOBILE.map((menu, idx) => {
+      {routerList.map((menu, i) => {
         if (menu.external) {
           return (
             <a
               href={menu.external}
-              key={idx}
+              key={i}
               target="_blank"
               rel="noreferrer"
               className="block text-normal-400 font-bold text-[36px] leading-[120%] font-larken transition-all ease-in duration-150 hover:text-[#007EFB] py-4 text-left"
@@ -27,7 +30,7 @@ const MobileMenu: React.FC<{ isShow: boolean }> = ({ isShow }) => {
 
         if (menu.href) {
           return (
-            <Link href={menu.href} key={idx}>
+            <Link href={menu.href} key={i}>
               <a className="block text-normal-400 font-bold text-[36px] leading-[120%] font-larken transition-all ease-in duration-150 hover:text-[#007EFB] py-4 ">
                 {menu.name}
               </a>
@@ -43,10 +46,19 @@ const MobileMenu: React.FC<{ isShow: boolean }> = ({ isShow }) => {
         </AtButton>
       </a>
       <div className="flex flex-row py-20 mt-14">
-        <img className="mr-9 h-[30px]" src="/svgs/medium-mobile.svg" alt="Medium" />
-        <img className="mr-9 h-[30px]" src="/svgs/discord-mobile.svg" alt="Discord" />
-        <img className="mr-9 h-[30px]" src="/svgs/twitter-mobile.svg" alt="Twitter" />
-        <img className="mr-9 h-[30px]" src="/svgs/telegram-mobile.svg" alt="Telegram" />
+        {
+          links.map((l, i) => (
+            <a
+              href={l.link}
+              key={i}
+              target="_blank"
+              rel="noreferrer"
+              className="block text-normal-400 font-bold text-[36px] leading-[120%] font-larken transition-all ease-in duration-150 hover:text-[#007EFB] py-4 text-left"
+            >
+              <img src={l.srcImg} alt={l.label} className="mr-9 h-[30px]" />
+            </a>
+          ))
+        }
       </div>
     </div>
   );

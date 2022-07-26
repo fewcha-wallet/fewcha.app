@@ -41,28 +41,52 @@ export const FOOTER_MENU = [
     label: "Community",
   },
 ];
-export const MENU_MOBILE = [
-  {
-    href: "/",
-    name: "Home",
-  },
-  {
-    href: "/contributor",
-    name: "Contributors",
-  },
-  {
-    external: mediumURL,
-    name: "Docs",
-  },
-  {
-    external: discordURL,
-    name: "Community",
-  },
-  {
-    external: discordURL,
-    name: "NFTs Playground",
-  },
-]
+export const MENU_MOBILE = {
+  routerList: [
+    {
+      href: "/",
+      name: "Home",
+    },
+    {
+      href: "/contributor",
+      name: "Contributors",
+    },
+    {
+      external: mediumURL,
+      name: "Docs",
+    },
+    {
+      external: discordURL,
+      name: "Community",
+    },
+    {
+      external: discordURL,
+      name: "NFTs Playground",
+    },
+  ],
+  links: [
+    {
+      label: 'medium',
+      link: mediumURL,
+      srcImg: "/svgs/medium-mobile.svg"
+    },
+    {
+      label: 'discord',
+      link: discordURL,
+      srcImg: "/svgs/discord-mobile.svg"
+    },
+    {
+      label: 'tweeter',
+      link: twitterURL,
+      srcImg: "/svgs/twitter-mobile.svg"
+    },
+    {
+      label: 'telegram',
+      link: telegramURL,
+      srcImg: "/svgs/telegram-mobile.svg"
+    }
+  ]
+}
 
 export const FUTURE_SECTION = {
   description: 'Simple, Elegant and Easy to use. Available on iOS, Chrome and more',
@@ -225,7 +249,7 @@ export const MEET_SECTION = {
     },
     {
       srcImg: "/images/contributor_person_8.png",
-      name: "Yueru",
+      name: "Nguyen Le",
       jobName: "Head of Communication",
       des: "Every problems is made to be solved",
       position: 'community'
@@ -235,28 +259,28 @@ export const MEET_SECTION = {
       name: "Quoc",
       jobName: "Senior Front-End",
       des: "I love to build beautiful interfaces",
-      position: 'font end'
+      position: 'front-end'
     },
     {
       srcImg: "/images/contributor_person_10.png",
       name: "Chung Nguyen",
       jobName: "Senior Front-End",
       des: "Making beautiful HTML/CSS",
-      position: 'font end'
+      position: 'front-end'
     },
     {
       srcImg: "/images/contributor_person_11.png",
       name: "Pham Anh",
       jobName: "Senior Quality Control",
       des: "Quality is everyone’s responsiblity",
-      position: 'tester'
+      position: 'quality control'
     },
     {
       srcImg: "/images/contributor_person_12.png",
       name: "Lam Tran",
       jobName: "Senior Quality Control",
       des: "Keep highest quality output",
-      position: 'tester'
+      position: 'quality control'
     },
     {
       srcImg: "/images/contributor_person_13.png",
