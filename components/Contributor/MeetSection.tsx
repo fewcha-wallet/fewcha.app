@@ -5,22 +5,34 @@ import cn from 'services/cn'
 const MeetSection: React.FC = () => {
   const { title, des, list, members } = MEET_SECTION
   const [index, setIndex] = useState(0)
-  const handleActive = (i: number) => {
+  const [listFilter, setFilter] = useState(list)
+
+  const handleActive = (i: number, item: string) => {
     setIndex(i)
+    const resultFilter = members.filter(m => {
+      if (item.toLowerCase() === 'all') {
+        console.log(item.toLowerCase());
+
+        return m
+      } else {
+
+      }
+      console.log(resultFilter)
+    })
   }
 
   return (
-    <section className='w-full py-[60px]'>
+    <section className='w-full py-[120px]'>
       <div className="container">
         <div className='text-[#292C33] text-center justify-center lg:w-[708px] mx-auto'>
           <p className='font-larken text-[40px] leading-[119%] font-medium lg:text-[60px]'>{title}</p>
-          <p className='text-[18px] leading-[153%] mt-4 mb-[60px] md:mb-[64p] font-medium '>{des}</p>
+          <p className='text-[18px] leading-[153%] mt-4 mb-[60px] md:mb-[64p]'>{des}</p>
         </div>
 
-        <div className='hidden max-h-[48px] md:max-h-max md:h-auto md:flex-wrap justify-start md:justify-start  w-full overflow-x-auto overflow-y-hidden md:overflow-y-auto gap-4 lg:justify-center md:pl-[0] mb-[32px]'>
+        <div className='flex max-h-[48px] md:max-h-max md:h-auto md:flex-wrap justify-start w-full overflow-x-auto overflow-y-hidden md:overflow-y-auto gap-[14.4px] md:pl-[0] mb-[32px]'>
           {list.map((item, i) => (
-            <p onClick={() => handleActive(i)} key={i} className={cn("hidden bg-[#F2F4F7] py-2.5 px-5 rounded-[100px] hover:cursor-pointer hover:opacity-[0.9] md:!inline-flex font-medium", {
-              "font-bold leading-[153%] text-[18px] text-white !bg-[#292C33]": index === i,
+            <p onClick={() => handleActive(i, item)} key={i} className={cn("hidden bg-[#F2F4F7] py-2.5 px-5 rounded-[100px] hover:cursor-pointer hover:opacity-[0.9] md:!inline-flex font-medium leading-[153%] text-[18px]", {
+              " text-white !bg-[#292C33]": index === i,
               "!inline-flex": i <= 1,
             })} >{item}</p>
           ))}

@@ -39,7 +39,7 @@ const Header: React.FC = () => {
         "white fixed top-0 left-0 right-0 w-full z-[999] transition-all ease-in-out duration-300",
         {
           "is-scroll": scroll,
-          "py-5 lg:py-7 xl:py-10": !scroll,
+          "py-5 lg:py-5": !scroll,
         }
       )}
     >
@@ -94,11 +94,11 @@ const Header: React.FC = () => {
             href={discordURL}
             target="_blank"
             rel="noreferrer"
-            className="hidden lg:block px-4 py-3 bg-[#4658E2] text-white font-medium rounded-[100px] w-[188px] hover:opacity-[0.9] transition-all"
+            className="hidden lg:block px-4 py-[10.40px] bg-[#4658E2] text-white font-medium rounded-[100px] w-[188px] hover:opacity-[0.9] transition-all"
           >
-            <div className="flex gap-x-1.5">
-              <img src="/svgs/discord.svg" alt="discord" />
-              <span>Felling Chatty?</span>
+            <div className="flex gap-x-1.5 items-center pl-[3px]">
+              <img src="/svgs/discord.svg" className='w-[20px] h-[15px]' alt="discord" />
+              <span>Feelling Chatty?</span>
             </div>
           </a>
 

@@ -73,8 +73,8 @@ export const FUTURE_SECTION = {
 }
 
 export const PREDICT_SECTION = {
-  title: "The best way to predict ‘Fewcha’ is to create it",
-  des: 'We research and develop products for the future of blockchain',
+  title: "The best way to predict the ‘Fewcha’ is to create it",
+  des: 'We research and develop cool products for Aptos - the future of blockchain',
   title2: "Old man said best way to predict ‘Fewcha’ is to create it"
 }
 
@@ -166,72 +166,104 @@ export const MEET_SECTION = {
   des: "We are a group of talented engineers, designers and strategists with a lot of experiences in blockchain and fintech. We always welcome talents from all over the world to build Fewcha together",
   list: [
     "All",
-    "Blockchain Engineer (1)",
-    "Front-End Engineer (2)",
+    "Core (3)",
+    "Blockchain (3)",
+    "Front-End(2)",
     "Designer (1)",
-    "Growth (2)",
-    "Core (3)"
+    "Community(2)",
+    "Quality Control(2)"
   ],
   members: [
     {
       srcImg: "/images/contributor_person_1.png",
       name: "Gabriel Lan",
-      jobName: "Co-Founder, CEO",
-      des: "Whatever"
+      jobName: "Co-Founder, Chief Executive Officer",
+      des: "Everything will be tokenized one day",
+      position: 'core'
     },
     {
       srcImg: "/images/contributor_person_2.png",
       name: "Tuan Nguyen",
-      jobName: "Co-Founder, CEO",
-      des: "Whatever"
+      jobName: "Co-Founder, Chief Operation Officer",
+      des: "Speed is everything",
+      position: 'core'
     },
     {
       srcImg: "/images/contributor_person_3.png",
       name: "Trong Dinh",
-      jobName: "CSO",
-      des: "Whatever"
+      jobName: "Chief Strategy Officer",
+      des: "Hope is not a strategy. Be prepared",
+      position: 'core'
+    },
+    {
+      srcImg: "/images/contributor_person_4.png",
+      name: "Pierre",
+      jobName: "Blockchain, Chief Technology Officer",
+      des: "I build complex blockchain system",
+      position: 'blockchain'
     },
     {
       srcImg: "/images/contributor_person_5.png",
-      name: "Pierre",
-      jobName: "Chief Technology Officer ",
-      des: "Build blockchain from scratch"
+      name: "Vien Le",
+      jobName: "Blockchain",
+      des: "I believe in decentralized future",
+      position: 'blockchain'
+    },
+    {
+      srcImg: "/images/contributor_person_6.png",
+      name: "Hoa",
+      jobName: "Blockchain",
+      des: "Happiness is when your code runs without error",
+      position: 'blockchain'
     },
     {
       srcImg: "/images/contributor_person_7.png",
       name: "Leon",
       jobName: "Head of Design",
-      des: "Make things pretty and usable"
-    },
-    {
-      srcImg: "/images/contributor_person_5.png",
-      name: "Yueru",
-      jobName: "Head of Communication",
-      des: "Build blockchain from scratch"
-    },
-    {
-      srcImg: "/images/contributor_person_6.png",
-      name: "Quoc",
-      jobName: "Head of Design",
-      des: "Make things pretty and usable"
-    },
-    {
-      srcImg: "/images/contributor_person_7.png",
-      name: "Vien Le",
-      jobName: "Chief Technology Officer",
-      des: "Build blockchain from scratch"
-    },
-    {
-      srcImg: "/images/contributor_person_7.png",
-      name: "Lam Tran",
-      jobName: "Quality Control",
-      des: "Build blockchain from scratch"
+      des: "Good design is invisible and intuitive",
+      position: 'design'
     },
     {
       srcImg: "/images/contributor_person_8.png",
+      name: "Yueru",
+      jobName: "Head of Communication",
+      des: "Every problems is made to be solved",
+      position: 'community'
+    },
+    {
+      srcImg: "/images/contributor_person_9.png",
+      name: "Quoc",
+      jobName: "Senior Front-End",
+      des: "I love to build beautiful interfaces",
+      position: 'font end'
+    },
+    {
+      srcImg: "/images/contributor_person_10.png",
+      name: "Chung Nguyen",
+      jobName: "Senior Front-End",
+      des: "Making beautiful HTML/CSS",
+      position: 'font end'
+    },
+    {
+      srcImg: "/images/contributor_person_11.png",
+      name: "Pham Anh",
+      jobName: "Senior Quality Control",
+      des: "Quality is everyone’s responsiblity",
+      position: 'tester'
+    },
+    {
+      srcImg: "/images/contributor_person_12.png",
+      name: "Lam Tran",
+      jobName: "Senior Quality Control",
+      des: "Keep highest quality output",
+      position: 'tester'
+    },
+    {
+      srcImg: "/images/contributor_person_13.png",
       name: "Galen",
-      jobName: "Moderator",
-      des: "Make things pretty and usable"
+      jobName: "Community Manager",
+      des: "Keep everything organized & funny",
+      position: 'community'
     },
   ]
 }
