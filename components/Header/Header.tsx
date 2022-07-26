@@ -54,7 +54,7 @@ const Header: React.FC = () => {
           </a>
         </Link>
 
-        <div className="hidden lg:flex items-center justify-center flex-1 gap-x-10">
+        <div className="hidden lg:flex items-center justify-center flex-1 gap-x-8">
           {MENUS.map((menu, i) => {
             if (menu.external) {
               return (

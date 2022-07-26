@@ -26,7 +26,7 @@ const UnlockSection: React.FC = () => {
                 })} >
                   <div className={cn("px-9 pt-9", { "md:text-right": !isId1Or3 })}>
                     <p className="text-[28px] md:text-[32px] font-medium leading-[120%]">{label}</p>
-                    <p className={cn("max-w-[310px] text-[16px] md:max-w-[242px] lg:text-[18px] leading-[140%] mt-2", { "float-right": !isId1Or3 })}>{des}</p>
+                    <p className={cn("max-w-[310px] text-[16px] md:max-w-[280px] lg:text-[18px] leading-[140%] mt-2 font-normal", { "float-right": !isId1Or3 })}>{des}</p>
                   </div>
                   <img src={imgPhone} alt="Iphone12" className={cn("absolute z-30 hidden lg:block", `${isId1Or3 ? "right" : "left"}-0`, `${isId1Or2 ? "bottom" : "top"}-0`)} />
 

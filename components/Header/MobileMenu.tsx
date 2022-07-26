@@ -6,18 +6,9 @@ import AtButton from "components/AtButton";
 const MobileMenu: React.FC<{ isShow: boolean }> = ({ isShow }) => {
   return (
     <div
-      className={`lg:hidden bg-[url('/images/road-map-background.png')] bg-cover bg-no-repeat bg-white list ${isShow ? "is-active" : ""
+      className={`lg:hidden bg-[url('/images/road-map-background.png')] bg-cover bg-no-repeat bg-white list mt-[80px] ${isShow ? "is-active" : ""
         }`}
     >
-      <Link href="/">
-        <a className="block absolute top-6">
-          <img
-            src="/svgs/logo.svg"
-            alt="logo"
-            className="max-w-[105px] md:max-w-[155px]"
-          />
-        </a>
-      </Link>
       <div className="hambugerBg"></div>
       {MENU_MOBILE.map((menu, idx) => {
         if (menu.external) {
@@ -47,7 +38,7 @@ const MobileMenu: React.FC<{ isShow: boolean }> = ({ isShow }) => {
         return null;
       })}
       <a href="https://fewcha.app" target="_blank" rel="noreferrer">
-        <AtButton className="hidden inline-block shadow-type-1 px-5 py-[14px] bg-[#14161A] text-white font-medium rounded-[34px] mt-8 text-[18px] leading-[120%] ">
+        <AtButton className="hidden shadow-type-1 px-5 py-[14px] bg-[#14161A] text-white font-medium rounded-[34px] mt-8 text-[18px] leading-[120%] ">
           Connect wallet
         </AtButton>
       </a>

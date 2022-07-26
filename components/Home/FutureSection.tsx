@@ -13,7 +13,7 @@ const FutureSection: React.FC = () => {
           <p className="text-[#000000] w-[327px] font-medium text-[18px] leading-[153%] pt-4 pb-6 pr-[26px] md:pr-0 lg:w-auto lg:pr-[170px]">
             {description}
           </p>
-          <a href={linkExt} target="_blank" rel="noreferrer" className="flex justify-between items-center bg-[#14161A] max-w-[186px] max-h-[48px] text-white px-6 py-[13px] text-center text-[18px] leading-[120%] rounded-[100px] hover:cursor-pointer hover:opacity-[0.92]">
+          <a href={linkExt} target="_blank" rel="noreferrer" className="flex justify-between items-center bg-[#14161A] max-w-[186px] max-h-[48px] text-white px-6 py-[13px] text-center text-[17px] leading-[120%] rounded-[100px] hover:cursor-pointer hover:opacity-[0.92] font-medium">
             <img src={imgExt} alt="Download" width={24} />
             <span>
               {getExt}
