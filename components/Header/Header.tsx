@@ -54,7 +54,7 @@ const Header: React.FC = () => {
             <img
               src="/svgs/logo.svg"
               alt="logo"
-              className="max-w-[105px] md:max-w-[155px]"
+              className="w-[110px] md:max-w-[155px]"
             />
           </a>
         </Link>
