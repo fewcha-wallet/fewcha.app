@@ -103,7 +103,7 @@ const Header: React.FC = () => {
           >
             <div className="flex gap-x-1.5 items-center pl-[3px]">
               <img src="/svgs/discord.svg" className='w-[20px] h-[15px]' alt="discord" />
-              <span>Feelling Chatty?</span>
+              <span>Feeling Chatty?</span>
             </div>
           </a>
 
