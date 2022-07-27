@@ -2,14 +2,13 @@ import React from "react";
 import { MENU_MOBILE } from "config/constants";
 import Link from "next/link";
 import AtButton from "components/AtButton";
-import { link } from "fs";
 
 const MobileMenu: React.FC<{ isShow: boolean }> = ({ isShow }) => {
   const { routerList, links } = MENU_MOBILE
 
   return (
     <div
-      className={`lg:hidden bg-[url('/images/road-map-background.png')] bg-cover bg-no-repeat bg-white list mt-[80px] ${isShow ? "is-active" : ""
+      className={`lg:hidden bg-[url('/images/road-map-background.png')] bg-cover bg-no-repeat bg-white opacity-[0.44] backdrop-blur-[200px] list mt-[80px] ${isShow ? "is-active" : "hidden"
         }`}
     >
       <div className="hambugerBg"></div>
@@ -45,7 +44,7 @@ const MobileMenu: React.FC<{ isShow: boolean }> = ({ isShow }) => {
           Connect wallet
         </AtButton>
       </a>
-      <div className="flex flex-row py-20 mt-14">
+      <div className="flex flex-row py-20 my-8">
         {
           links.map((l, i) => (
             <a

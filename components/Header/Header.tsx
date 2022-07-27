@@ -28,13 +28,18 @@ const Header: React.FC = () => {
 
   const toggleMobile = () => {
     setShowMobile(!showMobile);
-    if (showMobile) document.body.style.overflow = "";
-    else document.body.style.overflow = "hidden";
+    // if (showMobile) document.body.style.overflow = "";
+    // else document.body.style.overflow = "hidden";
   };
+
+  const handleClick = () => {
+    setShowMobile(!showMobile)
+  }
 
   console.log(indexActive)
   return (
     <header
+      onClick={handleClick}
       className={cn(
         "white fixed top-0 left-0 right-0 w-full z-[9999] transition-all ease-in-out duration-300",
         {
