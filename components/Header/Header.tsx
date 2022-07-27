@@ -12,7 +12,6 @@ import { useRouter } from 'next/router';
 const Header: React.FC = () => {
   const [scroll, setScroll] = useState(false);
   const [showMobile, setShowMobile] = useState(false);
-  const [indexActive, setIndexActive] = useState(0)
 
   const router = useRouter()
 
@@ -82,9 +81,9 @@ const Header: React.FC = () => {
 
             if (menu.href) {
               return (
-                <Link onClick={handleClick} href={menu.href} key={i} >
+                <Link href={menu.href} key={i} >
                   <a
-                    onClick={() => setIndexActive(i)}
+                    onClick={handleClick}
                     className={cn("header-link py-2 block text-[#292C33] font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200 mr-4", {
                       'text-primary-200': router.pathname === menu.href
                     })}

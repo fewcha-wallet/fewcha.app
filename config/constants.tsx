@@ -189,60 +189,60 @@ export const MEET_SECTION = {
   title: "Meet our contributors",
   des: "We are a group of talented engineers, designers and strategists with a lot of experiences in blockchain and fintech. We always welcome talents from all over the world to build Fewcha together",
   list: [
-    "All",
-    "Core (3)",
-    "Blockchain (3)",
-    "Front-End (2)",
-    "Designer (1)",
-    "Community (2)",
-    "Quality Control (2)"
+    // "All",
+    // "Core (3)",
+    // "Engineer (3)",
+    // "Designer (1)",
+    // "Community (2)",
+    // "Business Analyst",
+    // "Growth"
   ],
   members: [
     {
       srcImg: "/images/contributor_person_1.png",
       name: "Gabriel Lan",
-      jobName: "Co-Founder, Chief Executive Officer",
+      jobName: "CEO",
       des: "Everything will be tokenized one day",
       position: 'core'
     },
     {
       srcImg: "/images/contributor_person_2.png",
       name: "Tuan Nguyen",
-      jobName: "Co-Founder, Chief Operation Officer",
+      jobName: "COO",
       des: "Speed is everything",
       position: 'core'
     },
     {
       srcImg: "/images/contributor_person_3.png",
       name: "Trong Dinh",
-      jobName: "Chief Strategy Officer",
+      jobName: "CSO",
       des: "Hope is not a strategy. Be prepared",
       position: 'core'
     },
     {
       srcImg: "/images/contributor_person_4.png",
-      name: "Pierre",
-      jobName: "Blockchain, Chief Technology Officer",
+      name: "Long Nguyen",
+      jobName: "CTO",
       des: "I build complex blockchain system",
       position: 'blockchain'
     },
     {
       srcImg: "/images/contributor_person_5.png",
       name: "Vien Le",
-      jobName: "Blockchain",
+      jobName: "Engineer",
       des: "I believe in decentralized future",
       position: 'blockchain'
     },
     {
       srcImg: "/images/contributor_person_6.png",
       name: "Hoa",
-      jobName: "Blockchain",
+      jobName: "Engineer",
       des: "Happiness is when your code runs without error",
       position: 'blockchain'
     },
     {
       srcImg: "/images/contributor_person_7.png",
-      name: "Leon",
+      name: "An Nguyen",
       jobName: "Head of Design",
       des: "Good design is invisible and intuitive",
       position: 'design'
@@ -250,35 +250,35 @@ export const MEET_SECTION = {
     {
       srcImg: "/images/contributor_person_8.png",
       name: "Nguyen Le",
-      jobName: "Head of Communication",
+      jobName: "Ecosystem Growth",
       des: "Every problems is made to be solved",
       position: 'community'
     },
     {
       srcImg: "/images/contributor_person_9.png",
       name: "Quoc",
-      jobName: "Senior Front-End",
+      jobName: "Engineer",
       des: "I love to build beautiful interfaces",
       position: 'front-end'
     },
     {
       srcImg: "/images/contributor_person_10.png",
       name: "Chung Nguyen",
-      jobName: "Senior Front-End",
-      des: "Making beautiful HTML/CSS",
+      jobName: "Engineer",
+      des: "Making beautiful interface",
       position: 'front-end'
     },
     {
       srcImg: "/images/contributor_person_11.png",
       name: "Pham Anh",
-      jobName: "Senior Quality Control",
+      jobName: "Business Analyst",
       des: "Quality is everyone’s responsiblity",
       position: 'quality control'
     },
     {
       srcImg: "/images/contributor_person_12.png",
       name: "Lam Tran",
-      jobName: "Senior Quality Control",
+      jobName: "Business Analyst",
       des: "Keep highest quality output",
       position: 'quality control'
     },
