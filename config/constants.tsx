@@ -222,7 +222,7 @@ export const MEET_SECTION = {
     {
       srcImg: "/images/contributor_person_4.png",
       name: "Long Nguyen",
-      jobName: "CTO",
+      jobName: "Head of Engineer",
       des: "I build complex blockchain system",
       position: 'blockchain'
     },
