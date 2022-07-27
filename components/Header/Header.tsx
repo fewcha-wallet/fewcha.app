@@ -39,7 +39,7 @@ const Header: React.FC = () => {
   console.log(indexActive)
   return (
     <header
-      onClick={handleClick}
+
       className={cn(
         "white fixed top-0 left-0 right-0 w-full z-[9999] transition-all ease-in-out duration-300",
         {
@@ -48,7 +48,7 @@ const Header: React.FC = () => {
         }
       )}
     >
-      <div className="container flex items-center">
+      <div onClick={handleClick} className="container flex items-center">
         <Link href="/" className="active">
           <a className="block">
             <img
@@ -59,7 +59,7 @@ const Header: React.FC = () => {
           </a>
         </Link>
 
-        <div className="hidden lg:flex items-center justify-center flex-1 gap-x-8">
+        <div onClick={handleClick} className="hidden lg:flex items-center justify-center flex-1 gap-x-8">
           {MENUS.map((menu, i) => {
             if (menu.external) {
               return (
@@ -77,7 +77,7 @@ const Header: React.FC = () => {
 
             if (menu.href) {
               return (
-                <Link href={menu.href} key={i} >
+                <Link onClick={handleClick} href={menu.href} key={i} >
                   <a
                     onClick={() => setIndexActive(i)}
                     className={cn("header-link py-2 block text-[#292C33] font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200 mr-4", {
