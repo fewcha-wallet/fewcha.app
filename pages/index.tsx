@@ -9,10 +9,13 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { Fragment } from "react";
 import Scroll from "react-scroll";
+import { useRouter } from "next/router";
 
 const Element = Scroll.Element;
 
 const Home: NextPage = () => {
+  // const router = useRouter()
+  // router.reload()
   return (
     <Fragment>
       <Head>

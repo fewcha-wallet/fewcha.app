@@ -90,7 +90,7 @@ const Header: React.FC = () => {
                   <a
                     onClick={handleClick}
                     className={cn("header-link py-2 block text-[#292C33] font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200 mr-4", {
-                      'text-primary-200': router.pathname === menu.href
+                      'text-primary-200': router.asPath === menu.href
                     })}
                   >
                     {menu.name}
