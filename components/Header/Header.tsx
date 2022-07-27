@@ -28,8 +28,8 @@ const Header: React.FC = () => {
 
   const toggleMobile = () => {
     setShowMobile(!showMobile);
-    if (showMobile) document.body.style.overflow = "";
-    else document.body.style.overflow = "hidden";
+    // if (showMobile) document.body.style.overflow = "";
+    // else document.body.style.overflow = "hidden";
   };
 
   const handleClick = () => {
