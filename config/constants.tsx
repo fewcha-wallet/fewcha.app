@@ -19,10 +19,10 @@ export const MENUS = [
     external: mediumURL,
     name: "Docs",
   },
-  {
-    external: discordURL,
-    name: "NFTs Playground",
-  },
+  // {
+  //   external: discordURL,
+  //   name: "NFTs Playground",
+  // },
 ];
 
 
@@ -59,10 +59,10 @@ export const MENU_MOBILE = {
       external: discordURL,
       name: "Community",
     },
-    {
-      external: discordURL,
-      name: "NFTs Playground",
-    },
+    // {
+    //   external: discordURL,
+    //   name: "NFTs Playground",
+    // },
   ],
   links: [
     {

@@ -68,7 +68,7 @@ const Header: React.FC = () => {
                   key={i}
                   target="_blank"
                   rel="noreferrer"
-                  className={cn("header-link py-2 block text-[#292C33] font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200")}
+                  className={cn("header-link py-2 block text-[#292C33] font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200 mr-4")}
                 >
                   {menu.name}
                 </a>
@@ -80,7 +80,7 @@ const Header: React.FC = () => {
                 <Link href={menu.href} key={i} >
                   <a
                     onClick={() => setIndexActive(i)}
-                    className={cn("header-link py-2 block text-[#292C33] font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200 ", {
+                    className={cn("header-link py-2 block text-[#292C33] font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200 mr-4", {
                       'text-primary-200': router.pathname === menu.href
                     })}
                   >

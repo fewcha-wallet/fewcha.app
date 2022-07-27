@@ -2,9 +2,12 @@ import React from "react";
 import { MENU_MOBILE } from "config/constants";
 import Link from "next/link";
 import AtButton from "components/AtButton";
+import { useRouter } from "next/router";
+import cn from 'services/cn'
 
 const MobileMenu: React.FC<{ isShow: boolean }> = ({ isShow }) => {
   const { routerList, links } = MENU_MOBILE
+  const router = useRouter()
 
   return (
     <div
@@ -20,7 +23,7 @@ const MobileMenu: React.FC<{ isShow: boolean }> = ({ isShow }) => {
               key={i}
               target="_blank"
               rel="noreferrer"
-              className="block text-normal-400 font-bold text-[36px] leading-[120%] font-larken transition-all ease-in duration-150 hover:text-[#007EFB] py-4 text-left"
+              className="block text-normal-400 text-[36px] leading-[120%] font-larken transition-all ease-in duration-150 hover:text-[#007EFB] py-4 text-left"
             >
               {menu.name}
             </a>
@@ -30,7 +33,9 @@ const MobileMenu: React.FC<{ isShow: boolean }> = ({ isShow }) => {
         if (menu.href) {
           return (
             <Link href={menu.href} key={i}>
-              <a className="block text-normal-400 font-bold text-[36px] leading-[120%] font-larken transition-all ease-in duration-150 hover:text-[#007EFB] py-4 ">
+              <a className={cn("block text-normal-400 text-[36px] leading-[120%] font-larken transition-all ease-in duration-150 hover:text-[#007EFB] py-4", {
+                "!text-primary-200 font-bold": router.pathname === menu.href
+              })}>
                 {menu.name}
               </a>
             </Link>
