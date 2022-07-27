@@ -9,11 +9,15 @@ import scroller = Scroll.scroller;
 import { useRouter } from 'next/router';
 
 
+
+
+
 const Header: React.FC = () => {
   const [scroll, setScroll] = useState(false);
   const [showMobile, setShowMobile] = useState(false);
-
   const router = useRouter()
+
+
 
   useEffect(() => {
     handleScroll();
@@ -82,7 +86,7 @@ const Header: React.FC = () => {
 
             if (menu.href === 'contributor') {
               return (
-                <Link href={menu.href} key={i} as={`/contributor`}>
+                <Link href={menu.href} key={i} as={`/contributor/`}>
                   <a
                     onClick={handleClick}
                     className={cn("header-link py-2 block text-[#292C33] font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200 mr-4", {
