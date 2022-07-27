@@ -9,6 +9,7 @@ const MobileMenu: React.FC<{ isShow: boolean }> = ({ isShow }) => {
   const { routerList, links } = MENU_MOBILE
   const router = useRouter()
 
+  // console.log('router: ', router)
   return (
     <div
       className={`lg:hidden bg-[url('/images/road-map-background.png')] bg-cover bg-right-bottom h-[100vh] z-[-1] mt-0 pt-[100px] bg-no-repeat bg-white list ${isShow ? "is-active" : "hidden"
@@ -32,7 +33,7 @@ const MobileMenu: React.FC<{ isShow: boolean }> = ({ isShow }) => {
 
         if (menu.href) {
           return (
-            <Link href={menu.href} key={i}>
+            <Link href={menu.href} key={i} as={menu.href === '/' ? '/' : `${menu.href}/`}>
               <a className={cn("block text-normal-400 text-[36px] leading-[120%] font-larken transition-all ease-in duration-150 hover:text-[#007EFB] py-4", {
                 "!text-primary-200 font-bold": router.pathname === menu.href
               })}>
@@ -42,7 +43,6 @@ const MobileMenu: React.FC<{ isShow: boolean }> = ({ isShow }) => {
           );
         }
 
-        return null;
       })}
       <a href="https://fewcha.app" target="_blank" rel="noreferrer">
         <AtButton className="hidden shadow-type-1 px-5 py-[14px] bg-[#14161A] text-white font-medium rounded-[34px] mt-8 text-[18px] leading-[120%] ">

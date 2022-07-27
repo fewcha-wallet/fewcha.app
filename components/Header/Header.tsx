@@ -84,21 +84,7 @@ const Header: React.FC = () => {
             }
 
 
-            if (menu.href === 'contributor') {
-              return (
-                <Link href={menu.href} key={i} as={`/contributor/`}>
-                  <a
-                    onClick={handleClick}
-                    className={cn("header-link py-2 block text-[#292C33] font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200 mr-4", {
-                      'text-primary-200': router.pathname === menu.href
-                    })}
-                  >
-                    {menu.name}
-                  </a>
-                </Link>
-              );
-            }
-            if (menu.href === '/') {
+            if (menu.href) {
               return (
                 <Link href={menu.href} key={i} as={menu.href}>
                   <a
@@ -113,7 +99,6 @@ const Header: React.FC = () => {
               );
             }
 
-            return null;
           })}
         </div>
 

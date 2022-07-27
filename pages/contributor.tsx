@@ -6,6 +6,7 @@ import Header from "components/Header/Header";
 import type { NextPage } from "next";
 import { Fragment } from "react";
 
+
 const Contributor: NextPage = () => {
   
 
