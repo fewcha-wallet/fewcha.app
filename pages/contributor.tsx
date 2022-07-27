@@ -7,6 +7,8 @@ import type { NextPage } from "next";
 import { Fragment } from "react";
 
 const Contributor: NextPage = () => {
+  
+
   return (
     <Fragment>
       <Header />
@@ -19,3 +21,5 @@ const Contributor: NextPage = () => {
 };
 
 export default Contributor;
+
+

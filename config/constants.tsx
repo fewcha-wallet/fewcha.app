@@ -12,7 +12,7 @@ export const MENUS = [
     name: "Home",
   },
   {
-    href: "/contributor",
+    href: "contributor",
     name: "Contributors",
   },
   {
