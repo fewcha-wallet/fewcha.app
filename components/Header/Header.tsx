@@ -81,7 +81,7 @@ const Header: React.FC = () => {
 
             if (menu.href) {
               return (
-                <Link href={menu.href} key={i} >
+                <Link href={menu.href} key={i} as={menu.href}>
                   <a
                     onClick={handleClick}
                     className={cn("header-link py-2 block text-[#292C33] font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200 mr-4", {
