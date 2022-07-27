@@ -35,9 +35,8 @@ const MeetSection: React.FC = () => {
 
         <div className='flex max-h-[48px] md:max-h-max md:h-auto md:flex-wrap justify-start w-full overflow-x-auto overflow-y-hidden md:overflow-y-auto gap-[14.4px] md:pl-[0] mb-[32px]'>
           {list.map((item, i) => (
-            <p onClick={() => handleActive(i, item)} key={i} className={cn("hidden bg-[#F2F4F7] py-2.5 px-5 rounded-[100px] hover:cursor-pointer hover:opacity-[0.9] md:!inline-flex leading-[153%] text-[18px]", {
+            <p onClick={() => handleActive(i, item)} key={i} className={cn("bg-[#F2F4F7] py-2.5 px-5 rounded-[100px] hover:cursor-pointer hover:opacity-[0.9] md:!inline-flex leading-[153%] text-[18px] !min-w-max", {
               " text-white !bg-[#292C33]": index === i,
-              "!inline-flex": i <= 1,
             })} >{item}</p>
           ))}
         </div>

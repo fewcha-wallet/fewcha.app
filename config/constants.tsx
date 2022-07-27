@@ -192,10 +192,10 @@ export const MEET_SECTION = {
     "All",
     "Core (3)",
     "Blockchain (3)",
-    "Front-End(2)",
+    "Front-End (2)",
     "Designer (1)",
-    "Community(2)",
-    "Quality Control(2)"
+    "Community (2)",
+    "Quality Control (2)"
   ],
   members: [
     {
