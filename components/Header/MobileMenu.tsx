@@ -11,7 +11,7 @@ const MobileMenu: React.FC<{ isShow: boolean }> = ({ isShow }) => {
 
   return (
     <div
-      className={`lg:hidden bg-[url('/images/road-map-background.png')] bg-cover bg-right-bottom h-[87vh] z-[-1] mt-0 pt-[100px] bg-no-repeat bg-white list ${isShow ? "is-active" : "hidden"
+      className={`lg:hidden bg-[url('/images/road-map-background.png')] bg-cover bg-right-bottom h-[100vh] z-[-1] mt-0 pt-[100px] bg-no-repeat bg-white list ${isShow ? "is-active" : "hidden"
         }`}
     >
       <div className="hambugerBg"></div>

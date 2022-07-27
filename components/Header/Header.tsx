@@ -36,7 +36,12 @@ const Header: React.FC = () => {
     setShowMobile(!showMobile)
   }
 
-  console.log(indexActive)
+  const handleClose = () => {
+    if (showMobile) {
+      setShowMobile(false)
+    }
+  }
+
   return (
     <header
 
@@ -48,7 +53,7 @@ const Header: React.FC = () => {
         }
       )}
     >
-      <div onClick={handleClick} className="container flex items-center">
+      <div onClick={handleClose} className="container flex items-center">
         <Link href="/" className="active">
           <a className="block">
             <img
