@@ -12,9 +12,17 @@ export const MENUS = [
     name: "Home",
   },
   {
-    href: "/contributor/",
+    href: "/contributor",
     name: "Contributors",
   },
+  // {
+  //   href: "privacy",
+  //   name: "Pri",
+  // },
+  // {
+  //   href: "terms",
+  //   name: "Ter",
+  // },
   {
     external: mediumURL,
     name: "Docs",

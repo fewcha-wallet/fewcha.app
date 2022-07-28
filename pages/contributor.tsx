@@ -8,7 +8,7 @@ import { Fragment } from "react";
 
 
 const Contributor: NextPage = () => {
-  
+
 
   return (
     <Fragment>
@@ -22,5 +22,4 @@ const Contributor: NextPage = () => {
 };
 
 export default Contributor;
-
 

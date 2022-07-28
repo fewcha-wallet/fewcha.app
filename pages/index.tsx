@@ -11,6 +11,9 @@ import { Fragment } from "react";
 import Scroll from "react-scroll";
 import { useRouter } from "next/router";
 
+// import Router from 'next/router'
+
+// Router.reload()
 const Element = Scroll.Element;
 
 const Home: NextPage = () => {
