@@ -12,7 +12,7 @@ export const MENUS = [
     name: "Home",
   },
   {
-    href: "/contributor",
+    href: " /contributor",
     name: "Contributors",
   },
   // {
@@ -216,14 +216,14 @@ export const MEET_SECTION = {
     {
       srcImg: "/images/contributor_person_2.png",
       name: "Tuan Nguyen",
-      jobName: "COO",
+      jobName: "CSO",
       des: "Speed is everything",
       position: 'core'
     },
     {
       srcImg: "/images/contributor_person_3.png",
       name: "Trong Dinh",
-      jobName: "CSO",
+      jobName: "CTO",
       des: "Hope is not a strategy. Be prepared",
       position: 'core'
     },
