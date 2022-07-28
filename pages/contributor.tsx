@@ -5,13 +5,17 @@ import Footer from "components/Footer/Footer";
 import Header from "components/Header/Header";
 import type { NextPage } from "next";
 import { Fragment } from "react";
-
+import Head from 'next/head';
 
 const Contributor: NextPage = () => {
 
 
   return (
     <Fragment>
+      <Head>
+        <title>Contributor Aptos Wallet</title>
+
+      </Head>
       <Header />
       <PredictSection />
       <MeetSection />
