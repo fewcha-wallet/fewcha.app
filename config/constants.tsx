@@ -1,212 +1,308 @@
 import {
-  chromeStoreExtURL,
   discordURL,
-  firefoxStoreExtURL,
   mediumURL,
+  telegramURL,
+  twitterURL,
+  chromeStoreExtURL
 } from "config/config";
 
 export const MENUS = [
   {
     href: "/",
-    name: "Overview",
+    name: "Home",
   },
   {
-    href: "/#roadmap",
-    name: "Roadmap",
+    href: "/contributor",
+    name: "Contributors",
   },
+  // {
+  //   href: "privacy",
+  //   name: "Pri",
+  // },
+  // {
+  //   href: "terms",
+  //   name: "Ter",
+  // },
   {
     external: mediumURL,
-    name: "Blog",
+    name: "Docs",
   },
-  {
-    external: discordURL,
-    name: "Support",
-  },
+  // {
+  //   external: discordURL,
+  //   name: "NFTs Playground",
+  // },
 ];
 
-export const BROWSERS = [
-  {
-    label: "Chrome",
-    url: "/svgs/chrome.svg",
-    href: chromeStoreExtURL,
-  },
-  {
-    label: "Brave",
-    url: "/svgs/brave.svg",
-    href: chromeStoreExtURL,
-  },
-  {
-    label: "Firefox",
-    url: "/svgs/firefox.svg",
-    href: firefoxStoreExtURL,
-  },
-  {
-    label: "Microsoft Edge",
-    url: "/svgs/microsoft-edge.svg",
-    href: chromeStoreExtURL,
-  },
-];
 
-export const ROADMAPS = [
-  {
-    label: (
-      <div className="flex gap-2">
-        <div>✅</div>
-        <div className="ml-4">Completed</div>
-      </div>
-    ),
-    cards: [
-      {
-        title: "Wallet Prototype 0.1.0",
-        date: "May 16,2022",
-        tasksLabel: "board 0.1",
-        tasks:
-          "https://fewcha.notion.site/03f9e71b1b8a47f3a2710569fcbdff3e?v=eaa14054915f4cca8d39b25e6d295379",
-        list: [
-          "Chrome, Brave, Edge",
-          "Create wallet",
-          "Wallet management",
-          "Send, receive APT balance",
-          "Custom network URL",
-          "Contact addresses book",
-          "Devnet faucet",
-        ],
-      },
-      {
-        title: "Wallet Prototype 0.2.0",
-        tasksLabel: "board 0.2",
-        tasks:
-          "https://fewcha.notion.site/292cc51ece26427baa9ec9f40ffb32c7?v=2565438f74104092ac33f07c3c32399c",
-        date: "May 28, 2022",
-        list: ["NFTs listings", "Improve lock timer"],
-      },
-    ],
-  },
-  {
-    label: (
-      <div className="flex">
-        <div>⏱</div>
-        <div className="ml-4">In progress</div>
-      </div>
-    ),
-    cards: [
-      {
-        title: "Aptos Web3 0.1",
-        date: "Est. June, 2022",
-        list: [
-          "Integrate w/ Aptos Web3.js",
-          "Websites that can connect",
-          "Make transactions",
-          "Confirm transactions flow",
-        ],
-      },
-      {
-        date: "Est. July, 2022",
-        title: "Wallet Prototype 0.3.0",
-        tasksLabel: "board 0.3",
-        tasks:
-          "https://fewcha.notion.site/0aad5119bdb54d9485ada38c68aa4710?v=c8a1b2c9130c422e9d3ef4f0c4406e00",
-        list: [
-          "Send and receive NFTs",
-          "Token listings",
-          "Send and receive Token",
-          "Change theme",
-          "Change language",
-        ],
-      },
-    ],
-  },
-  {
-    label: (
-      <div className="flex gap-2">
-        <div>💭</div>
-        <div className="ml-4">Planned</div>
-      </div>
-    ),
-    cards: [
-      {
-        title: "Release version 1.0.0",
-        date: "EST. September 2022",
-        list: ["Update to official design", "Become a validator node!!!"],
-      },
-      {
-        title: "Release version 1.1.0",
-        date: "EST. Q4 2022",
-        list: ["More fetures", "Connect with ledger wallet"],
-      },
-      {
-        title: "Multiplatform",
-        date: "EST. Q4 2022",
-        list: ["Firefox version", "iOS version", "Android version"],
-      },
-      {
-        title: "Ecosystem",
-        date: "EST. Q1 2023",
-        list: ["Token swap", "NFTs marketplace"],
-      },
-    ],
-  },
-];
 
 export const FOOTER_MENU = [
   {
-    title: "Product",
-    list: [
-      {
-        external: "/",
-        label: "Overview",
-      },
-      {
-        external: "/",
-        label: "Download",
-      },
-      {
-        external: discordURL,
-        label: "Support",
-      },
-      {
-        external: discordURL,
-        label: "Feature Requests",
-      },
-    ],
+    href: "/contributor",
+    label: "Contributors",
   },
   {
-    title: "Resources",
-    list: [
-      {
-        external: mediumURL,
-        label: "Blog",
-      },
-      {
-        label: "Docs (Building)",
-      },
-      {
-        href: "",
-        label: "Status",
-      },
-      {
-        href: "/terms",
-        label: "Terms",
-      },
-      {
-        href: "/privacy",
-        label: "Privacy",
-      },
-    ],
+    external: mediumURL,
+    label: "Docs",
   },
   {
-    title: "Company",
-    list: [
-      {
-        href: mediumURL,
-        label: "About",
-      },
-      {
-        label: "Jobs",
-      },
-      {
-        label: "Press Kit",
-      },
-    ],
+    external: discordURL,
+    label: "Community",
   },
 ];
+export const MENU_MOBILE = {
+  routerList: [
+    {
+      href: "/",
+      name: "Home",
+    },
+    {
+      href: "/contributor",
+      name: "Contributors",
+    },
+    {
+      external: mediumURL,
+      name: "Docs",
+    },
+    {
+      external: discordURL,
+      name: "Community",
+    },
+    // {
+    //   external: discordURL,
+    //   name: "NFTs Playground",
+    // },
+  ],
+  links: [
+    {
+      label: 'medium',
+      link: mediumURL,
+      srcImg: "/svgs/medium-mobile.svg"
+    },
+    {
+      label: 'discord',
+      link: discordURL,
+      srcImg: "/svgs/discord-mobile.svg"
+    },
+    {
+      label: 'tweeter',
+      link: twitterURL,
+      srcImg: "/svgs/twitter-mobile.svg"
+    },
+    {
+      label: 'telegram',
+      link: telegramURL,
+      srcImg: "/svgs/telegram-mobile.svg"
+    }
+  ]
+}
+
+export const FUTURE_SECTION = {
+  description: 'Simple, Elegant and Easy to use. Available on iOS, Chrome and more',
+  getExt: 'Get Extension',
+  imgExt: "svgs/chrome2.svg",
+  imgBgMobile: "images/bg-mobile-hero.png",
+  linkExt: chromeStoreExtURL
+}
+
+export const PREDICT_SECTION = {
+  title: "The best way to predict the ‘Fewcha’ is to create it",
+  des: 'We research and develop cool products for Aptos - the future of blockchain',
+  title2: "Old man said best way to predict ‘Fewcha’ is to create it"
+}
+
+export const UNLOCK_SECTION = {
+  title: 'The key to unlock the Aptoverse',
+  description: 'Fewcha is a web3 wallet that unlocks a universe of applications in Aptos Blockchain',
+  content: [
+    {
+      id: 1,
+      label: "Fully Secured",
+      des: 'You can store, send and swap Tokens & NFTs with Fewcha Wallet',
+      imgPhone: 'images/Iphone12Pro-1.png',
+      shape: 'svgs/shape1.svg',
+    },
+    {
+      id: 2,
+      label: "Independent Audit",
+      des: "Fewcha's safety and security will be thoroughly audited by Verichains Lab",
+      imgPhone: 'images/Iphone12Pro-2.png',
+      shape: 'svgs/shape2.svg'
+    },
+    {
+      id: 3,
+      label: "Provide Web3",
+      des: 'Fewcha also provides web3 connection for dApps builders to integrate with Aptos ecosystem in a handy way.',
+      imgPhone: 'images/Iphone12Pro-3.png',
+      shape: 'svgs/shape3.svg'
+    },
+    {
+      id: 4,
+      label: "Privacy matters",
+      des: 'We know privacy is a fundamental human right. So only you can access your wallet. You are in control of your funds at all times',
+      imgPhone: 'images/Iphone12Pro-4.png',
+      shape: 'svgs/shape4.svg',
+
+    },
+  ]
+}
+
+export const ROADMAP_SECTION = {
+  title: "Our roadmap in 2022",
+  des: "The below view is an insight into what we're currently working on, what's coming up and what is planned. We will update regularly",
+  checkIcon: '/svgs/check-solid.svg',
+  descIcon: "/svgs/circle-solid.svg",
+  content: [
+    ['Initial Research', 'Trend Analytics', 'Tech Possibility Validation'],
+    ['Product Conceptualization', 'UI/UX Design', 'Chrome Extension v0.1 & v0.2 Development', 'Web3 Connection v0.1.0 Development (Web3.js)'],
+    ['Chrome Extension v0.3 Development', 'Web3 Connection v0.2.0 Development (Web3 React)', 'Developer Guide Document v0.1', 'Security Audit', 'Mobile Prototype v0.1 Development', 'Aptos Improvement Proposal Contributor for Wallet & Web3', 'Aptos SDK Dart v0.1 Development'],
+    ['Chrome Extension Official v1.0 (Chrome, Brave, Edge)', 'Firefox Extension Official v1.0', 'Web3 Connection Official v1.0', 'Developer Guide Document Official v.1.0', 'Security Audit', 'Mobile Prototype v0.2 Development', 'Aptos Improvement Proposal Contributor for Wallet & Web3'],
+  ]
+}
+
+export const INSTALL_SECTION = {
+  title: 'Install Fewcha to explore the Aptoverse',
+  des: 'You are just 1-click away from an amazing promised world of Aptos. What are you waiting for?',
+  more: 'Get Extension',
+  linkExt: chromeStoreExtURL
+}
+
+export const JOIN_SECTION = {
+  title: 'Join us',
+  des: 'Fewcha is currently under development and anybody can contribute to the vision by joining our community',
+  links: [
+    {
+      label: "Medium",
+      src: "/svgs/medium.svg",
+      href: mediumURL,
+    },
+    {
+      label: "Discord",
+      src: "/svgs/discord2.svg",
+      href: discordURL,
+    },
+    {
+      label: "Twitter",
+      src: "/svgs/twitter.svg",
+      href: twitterURL,
+    },
+    {
+      label: "Telegram",
+      src: "/svgs/telegram2.svg",
+      href: telegramURL,
+    },
+  ]
+}
+
+export const MEET_SECTION = {
+  title: "Meet our contributors",
+  des: "We are a group of talented engineers, designers and strategists with a lot of experiences in blockchain and fintech. We always welcome talents from all over the world to build Fewcha together",
+  list: [
+    // "All",
+    // "Core (3)",
+    // "Engineer (3)",
+    // "Designer (1)",
+    // "Community (2)",
+    // "Business Analyst",
+    // "Growth"
+  ],
+  members: [
+    {
+      srcImg: "/images/contributor_person_1.png",
+      name: "Gabriel Lan",
+      jobName: "CEO",
+      des: "Everything will be tokenized one day",
+      position: 'core'
+    },
+    {
+      srcImg: "/images/contributor_person_2.png",
+      name: "Tuan Nguyen",
+      jobName: "Strategic Advisor",
+      des: "Speed is everything",
+      position: 'core'
+    },
+    {
+      srcImg: "/images/contributor_person_3.png",
+      name: "Trong Dinh",
+      jobName: "CTO",
+      des: "Hope is not a strategy. Be prepared",
+      position: 'core'
+    },
+    {
+      srcImg: "/images/contributor_person_4.png",
+      name: "Long Nguyen",
+      jobName: "Head of Engineer",
+      des: "I build complex blockchain system",
+      position: 'blockchain'
+    },
+    {
+      srcImg: "/images/contributor_person_5.png",
+      name: "Vien Le",
+      jobName: "Engineer",
+      des: "I believe in decentralized future",
+      position: 'blockchain'
+    },
+    {
+      srcImg: "/images/contributor_person_6.png",
+      name: "Hoa",
+      jobName: "Engineer",
+      des: "Happiness is when your code runs without error",
+      position: 'blockchain'
+    },
+    {
+      srcImg: "/images/contributor_person_7.png",
+      name: "An Nguyen",
+      jobName: "Head of Design",
+      des: "Good design is invisible and intuitive",
+      position: 'design'
+    },
+    {
+      srcImg: "/images/contributor_person_8.png",
+      name: "Nguyen Le",
+      jobName: "Ecosystem Growth",
+      des: "Every problems is made to be solved",
+      position: 'community'
+    },
+    {
+      srcImg: "/images/contributor_person_9.png",
+      name: "Quoc",
+      jobName: "Engineer",
+      des: "I love to build beautiful interfaces",
+      position: 'front-end'
+    },
+    {
+      srcImg: "/images/contributor_person_10.png",
+      name: "Chung Nguyen",
+      jobName: "Engineer",
+      des: "Making beautiful interface",
+      position: 'front-end'
+    },
+    {
+      srcImg: "/images/contributor_person_11.png",
+      name: "Pham Anh",
+      jobName: "Business Analyst",
+      des: "Quality is everyone’s responsiblity",
+      position: 'quality control'
+    },
+    {
+      srcImg: "/images/contributor_person_12.png",
+      name: "Lam Tran",
+      jobName: "Business Analyst",
+      des: "Keep highest quality output",
+      position: 'quality control'
+    },
+    {
+      srcImg: "/images/contributor_person_13.png",
+      name: "Galen",
+      jobName: "Community Manager",
+      des: "Keep everything organized & funny",
+      position: 'community'
+    },
+  ]
+}
+
+export const GET_APP_SECTION = {
+  title: "Get Fewcha app now!",
+  des: "You are just 1-click away from an amazing promised universe of Aptoverse. So what are you waiting for?",
+  title2: "Get the extension",
+  linkExt: chromeStoreExtURL,
+}

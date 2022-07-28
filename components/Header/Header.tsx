@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
+import { discordURL } from 'config/config';
 import { MENUS } from "config/constants";
-import MobileMenu from "./MobileMenu";
-import { chromeStoreExtURL } from "config/config";
-import cn from "services/cn";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
 import Scroll from "react-scroll";
+import cn from "services/cn";
+import MobileMenu from "./MobileMenu";
 import scroller = Scroll.scroller;
+import { useRouter } from 'next/router';
 
 const Header: React.FC = () => {
   const [scroll, setScroll] = useState(false);
   const [showMobile, setShowMobile] = useState(false);
-
+  const router = useRouter()
   useEffect(() => {
     handleScroll();
     window.addEventListener("scroll", handleScroll);
@@ -23,91 +24,93 @@ const Header: React.FC = () => {
 
   const toggleMobile = () => {
     setShowMobile(!showMobile);
-    if (showMobile) document.body.style.overflow = "";
-    else document.body.style.overflow = "hidden";
+    // if (showMobile) document.body.style.overflow = "";
+    // else document.body.style.overflow = "hidden";
   };
+
+  const handleClick = () => {
+    setShowMobile(!showMobile)
+  }
+
+  const handleClose = () => {
+    if (showMobile) {
+      setShowMobile(false)
+    }
+  }
 
   return (
     <header
+
       className={cn(
-        "white fixed top-0 left-0 right-0 w-full z-[999] transition-all ease-in-out duration-300",
+        "white fixed top-0 left-0 right-0 w-full z-[9999] transition-all ease-in-out duration-300",
         {
           "is-scroll": scroll,
-          "py-5 lg:py-7 xl:py-10": !scroll,
+          "py-5 lg:py-5": !scroll,
         }
       )}
     >
-      <div className="container xs:px-13 flex items-center">
-        <Link href="/">
+      <div onClick={handleClose} className="container flex items-center">
+        <Link href="/" className="active">
           <a className="block">
             <img
-              src={cn({
-                "/svgs/logo-light.svg": !scroll,
-                "/svgs/logo.svg": scroll,
-              })}
+              src="/svgs/logo.svg"
               alt="logo"
-              className="max-w-[105px] md:max-w-[155px]"
+              className="w-[110px] md:max-w-[155px]"
             />
           </a>
         </Link>
 
-        <div className="hidden lg:flex items-center justify-center flex-1 gap-x-10">
-          {MENUS.map((menu, idx) => {
+        <div onClick={handleClick} className="hidden lg:flex items-center justify-center flex-1 gap-x-8">
+          {MENUS.map((menu, i) => {
             if (menu.external) {
               return (
                 <a
                   href={menu.external}
-                  key={idx}
+                  key={i}
                   target="_blank"
                   rel="noreferrer"
-                  className="header-link py-2 block text-white font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200"
+                  className={cn("header-link py-2 block text-[#292C33] font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200 mr-4")}
                 >
                   {menu.name}
                 </a>
               );
             }
 
+
             if (menu.href) {
               return (
-                <Link href={menu.href} key={idx}>
+                <Link href={menu.href} key={i} as={menu.href}>
                   <a
-                    onClick={(e) => {
-                      if (menu.href === "/#roadmap") {
-                        e.preventDefault();
-                        scroller.scrollTo("roadmap", {
-                          duration: 500,
-                          delay: 50,
-                          smooth: true,
-                          offset: -90,
-                        });
-                      }
-                    }}
-                    className="header-link py-2 block text-white font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200"
+                    onClick={handleClick}
+                    className={cn(" header-link py-2  font-medium font-caption transition-all ease-in duration-150 hover:text-primary-200 mr-4 ", {
+                      '!text-primary-200': router.pathname === menu.href
+                    })}
                   >
                     {menu.name}
                   </a>
                 </Link>
-              );
+              )
             }
 
-            return null;
           })}
         </div>
 
         <div className="relative ml-auto flex items-center gap-6">
           <a
-            href={chromeStoreExtURL}
+            href={discordURL}
             target="_blank"
             rel="noreferrer"
-            className="hidden sm:inline-block px-6 py-[14px] bg-[#007EFB] text-white font-medium rounded-[34px]"
+            className="hidden lg:block px-4 py-[10.40px] bg-[#4658E2] text-white font-medium rounded-[100px] w-[188px] hover:opacity-[0.9] transition-all"
           >
-            Download
+            <div className="flex gap-x-1.5 items-center pl-[3px]">
+              <img src="/svgs/discord.svg" className='w-[20px] h-[15px]' alt="discord" />
+              <span>Feeling Chatty?</span>
+            </div>
           </a>
 
           <div
-            className={`block lg:hidden hambuger ${
-              showMobile ? "is-active" : ""
-            }`}
+            className={`block lg:hidden hambuger ${showMobile ? "is-active" : ""
+              }`}
             onClick={toggleMobile}
           >
             <span className="line"></span>
@@ -115,7 +118,7 @@ const Header: React.FC = () => {
         </div>
       </div>
       <MobileMenu isShow={showMobile} />
-    </header>
+    </header >
   );
 };
 

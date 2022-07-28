@@ -1,17 +1,24 @@
-import Head from "next/head";
-import type { NextPage } from "next";
-import { Fragment } from "react";
-import Header from "components/Header/Header";
-import SpendAndCheck from "components/Home/SpendAndCheck";
-import RoadmapSection from "components/Home/RoadmapSection";
 import Footer from "components/Footer/Footer";
-import ReadySection from "components/Home/ReadySection";
-import HeroSection2 from "components/Home/HeroSection2";
+import Header from "components/Header/Header";
+import FutureSection from "components/Home/FutureSection";
+import InstallSection from "components/Home/InstallSection";
+import JoinSection from "components/Home/JoinSection";
+import RoadmapSection from "components/Home/RoadmapSection";
+import UnlockSection from "components/Home/UnlockSection";
+import type { NextPage } from "next";
+import Head from "next/head";
+import { Fragment } from "react";
 import Scroll from "react-scroll";
+import { useRouter } from "next/router";
 
+// import Router from 'next/router'
+
+// Router.reload()
 const Element = Scroll.Element;
 
 const Home: NextPage = () => {
+  // const router = useRouter()
+  // router.reload()
   return (
     <Fragment>
       <Head>
@@ -64,7 +71,7 @@ const Home: NextPage = () => {
         <link
           rel="apple-touch-icon"
           sizes="76x76"
-          href="/apple-icon-76x76.png"
+          href="/apple-touch-icon.png"
         />
         <link
           rel="apple-touch-icon"
@@ -97,6 +104,7 @@ const Home: NextPage = () => {
           sizes="192x192"
           href="/android-icon-192x192.png"
         />
+
         <link
           rel="icon"
           type="image/png"
@@ -106,15 +114,16 @@ const Home: NextPage = () => {
         <link
           rel="icon"
           type="image/png"
-          sizes="96x96"
-          href="/favicon-96x96.png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/favicon-16x16.png"
+          href="/favicon.ico"
         />
+
         <link rel="manifest" href="/manifest.json" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
@@ -122,12 +131,13 @@ const Home: NextPage = () => {
       </Head>
       <Header />
       <main>
-        <HeroSection2 />
-        <SpendAndCheck />
+        <FutureSection />
+        <UnlockSection />
         <Element name="roadmap">
           <RoadmapSection />
         </Element>
-        <ReadySection />
+        <InstallSection />
+        <JoinSection />
       </main>
       <Footer />
     </Fragment>
